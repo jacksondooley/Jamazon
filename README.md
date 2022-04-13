@@ -1,25 +1,9 @@
-# README
+# Jamazon Wiki
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Jamazon Live]() (would be live link)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Jamazon
+* [MVP List]()
+* [Database Schema]()
+* [Sample State]()
+* [Frontend Routes and Components]()
+* [Backend Routes]()
