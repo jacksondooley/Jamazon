@@ -14,7 +14,7 @@
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   },
-  "description": "[Jamazon Live]() (would be live link)",
+  "description": "amazon clone",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
