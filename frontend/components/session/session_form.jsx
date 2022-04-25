@@ -70,12 +70,18 @@ class SessionForm extends React.Component {
             }
         }
 
+        const capitalize = (string) => {
+            return string.charAt(0).toUpperCase() + string.slice(1)
+        }
+
 
         return (
             <div className="session-container">
                 <Link to="/"><h1>Jamazon</h1></Link>
                 <div className="session-form">
-                    <h2>{this.props.formType}</h2>
+                    <div className="session-title">
+                        <h2>{capitalize(this.props.formType)}</h2>
+                    </div>
                     <form onSubmit={this.handleSubmit}>
                         <label>Email
                             <input
@@ -97,9 +103,9 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <SessionErrors errors={this.props.errors} />
-                        <input className="button" type="submit" value={this.props.formType}/>
+                        <input className="button" type="submit" value={capitalize(this.props.formType)}/>
                     </form>
-                    <DemoUser setState={this.setState}/>
+                    <DemoUser handleChange={this.handleChange}/>
                 </div>
                 <div className="switch-form">
                    <h5 className="switch-form-text"><span>{oppForm() === 'signup' ? "Don't have an account yet?" : "Already have an account?"}</span></h5>
@@ -107,7 +113,7 @@ class SessionForm extends React.Component {
                 </div>
                 <div className="switch-button">
                     <Link to={`/${oppForm()}`}>
-                        <button className="button">{oppForm()}</button>    
+                        <button className="button">{capitalize(oppForm())}</button>    
                     </Link>
                 </div>
                 <SessionFooter/>

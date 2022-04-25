@@ -16,6 +16,12 @@
     padding: 20px 26px;
 }
 
+.session-title > h2 {
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
 .session-input {
     margin-top: 2px;
     height: 31px;
@@ -83,10 +89,18 @@ span {
     border-top: 2px solid rgb(206, 206, 206);
     width: 100%;
     background-color: rgb(240, 240, 240);
-    height: 200px;
+    height: 100px;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.github {
+    padding: 10px 10px 10px 10px;
+}
+
+.linkedin {
+    padding: 10px 10px 10px 10px;
 }

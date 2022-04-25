@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ a {
+    text-decoration: none;
+    color: black;
+ }
+
  .button {
     font-size: 12px;
     height: 27px;
@@ -34,4 +39,33 @@
     cursor: pointer;
     background: linear-gradient(to bottom, #f7d27e, #edb936);
     background-image: linear-gradient(#f9d787, #edb31f);
+ }
+
+.footer-top {
+   display: flex;
+   justify-content: center;
+   border-top: 2px solid black;
+   width: 100%;
+   background-color: #232f3e;
+   height: 100px;
+   position: fixed;
+   left: 0;
+   bottom: 40px;
+   width: 100%;
+   text-align: center;
+}
+
+ .footer-bottom {
+      display: flex;
+      justify-content: center;
+      border-top: 2px solid black;
+      width: 100%;
+      color: rgb(229, 227, 227);
+      background-color: #131921;
+      height: 40px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
  }
