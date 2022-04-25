@@ -1,6 +1,9 @@
 import React from "react"
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import DemoUser from "./demo_user";
+import SessionErrors from "./session_errors";
+import SessionFooter from "./session_footer";
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -39,6 +42,7 @@ class SessionForm extends React.Component {
         e.preventDefault()
         <Route
     }
+    
 
     render() {
         const oppForm = () => {
@@ -66,6 +70,7 @@ class SessionForm extends React.Component {
             }
         }
 
+
         return (
             <div className="session-container">
                 <Link to="/"><h1>Jamazon</h1></Link>
@@ -91,13 +96,21 @@ class SessionForm extends React.Component {
                                 onChange={this.handleChange}
                             />
                         </label>
+                        <SessionErrors errors={this.props.errors} />
                         <input className="button" type="submit" value={this.props.formType}/>
                     </form>
-                    <input className="button" type="button" value="Demo User"/>
+                    <DemoUser setState={this.setState}/>
+                </div>
+                <div className="switch-form">
+                   <h5 className="switch-form-text"><span>{oppForm() === 'signup' ? "Don't have an account yet?" : "Already have an account?"}</span></h5>
+                    <div className="switch-form-line"></div>
+                </div>
+                <div className="switch-button">
                     <Link to={`/${oppForm()}`}>
                         <button className="button">{oppForm()}</button>    
                     </Link>
                 </div>
+                <SessionFooter/>
             </div>
         )
     }

@@ -1,3 +1,7 @@
+.nav-bar {
+    width: 110%;
+}
+
 .nav-belt {
     display: flex;
     flex-direction: row;

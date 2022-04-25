@@ -3,10 +3,10 @@ import NavBelt from "./nav_belt";
 import NavMain from "./nav_main";
 
 const NavBar = () => (
-    <div>
+    <header>
         <NavBelt />
         <NavMain />
-    </div>
+    </header>
 )
 
 export default NavBar
