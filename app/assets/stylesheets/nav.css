@@ -1,0 +1,14 @@
+.nav-belt {
+    display: flex;
+    flex-direction: row;
+    background-color: #131921;
+    height: 60px;
+    color: #ffff;
+}
+
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    background-color: #232f3e;
+    height: 30px;
+}
