@@ -1,12 +1,12 @@
 .nav-bar {
-    width: 110%;
+    width: 100%;
 }
 
 .nav-belt {
     display: flex;
     flex-direction: row;
     background-color: #131921;
-    height: 60px;
+    height: 70px;
     color: #ffff;
 }
 
@@ -14,5 +14,5 @@
     display: flex;
     flex-direction: row;
     background-color: #232f3e;
-    height: 30px;
+    height: 35px;
 }
