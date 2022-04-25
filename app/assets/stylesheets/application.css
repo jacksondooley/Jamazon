@@ -26,8 +26,12 @@
     margin-bottom: 7px;
  }
 
+ h2 {
+    font-size: 35px;
+ }
+
  .button:hover {
     cursor: pointer;
-    background: linear-gradient(to bottom, #f8c140, #e7b842);
-    background-image: linear-gradient(#fbd272, #e9b42d);
+    background: linear-gradient(to bottom, #f7d27e, #edb936);
+    background-image: linear-gradient(#f9d787, #edb31f);
  }

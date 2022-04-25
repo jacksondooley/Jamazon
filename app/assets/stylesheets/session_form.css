@@ -48,7 +48,8 @@
     color: #807e7e;
     background-color: white;
     height: 5px;
-    font-size: 13px;
+    font-size: 14px;
+    /* font-weight: bold; */
 }
 span {
     background-color: #fff;
@@ -62,7 +63,7 @@ span {
     border-top: 1px solid #d2d2d2;
     width: 300px;
     position: relative;
-    margin-top: -6.5px;
+    margin-top: -7px;
     padding-bottom: 10px;
     z-index: 0;
 }

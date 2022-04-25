@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
         const formName = () => {
             if (this.props.formType === 'signup') {
                 return (
-                    <label>Name:
+                    <label>Name
                         <input
                             className="session-input"
                             type="text"
@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
                 <div className="session-form">
                     <h2>{this.props.formType}</h2>
                     <form onSubmit={this.handleSubmit}>
-                        <label>Email:
+                        <label>Email
                             <input
                                 className="session-input"
                                 type="text"
@@ -87,7 +87,7 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         {formName()}
-                        <label htmlFor="">Password:
+                        <label htmlFor="">Password
                             <input 
                                 className="session-input"
                                 type="text"

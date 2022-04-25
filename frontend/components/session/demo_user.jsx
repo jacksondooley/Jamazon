@@ -4,9 +4,9 @@ import { Redirect } from "react-router-dom";
 
 const DemoUser = (props) => {
 
-  const startDemo = () => {
-    console.log("yes")
-  }
+  // const startDemo = () => {
+
+  // }
 
 
 
