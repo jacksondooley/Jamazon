@@ -10,10 +10,12 @@ class ShoppingCart extends React.Component {
   render() {
     return (
       <div className="shopping-cart">
-        <IconContext.Provider value={{ size: "40px" }}>
+        {/* <IconContext.Provider value={{ size: "40px" }}>
           <FaShoppingCart/>
-        </IconContext.Provider>
-        <img  src="/assets/cart.svg" />
+        </IconContext.Provider> */}
+        <div className="shopping-cart-num">2</div>
+        <img  className="shopping-cart-icon" src="/assets/cart.svg" />
+        <div>Cart</div>
       </div>
     )
   }

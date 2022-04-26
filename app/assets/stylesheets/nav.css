@@ -43,7 +43,7 @@
     border: 3px solid #e9b42d;
     border-radius: 10px;
     /* box-shadow: 0 0 10px #e9b42d; */
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .FaSearch {
@@ -108,15 +108,26 @@
 .logo {
     width: 100px;
     height: 40px;
-    border: 2px solid #131921;
+    border: 2px solid white;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(323deg) brightness(109%) contrast(101%);
+}
+
+.logo-j {
+    font-size: 40px;
 }
 
 .logo-padding {
     padding: 10px;
 }
 
+.logo-padding > a {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
 .logo:hover {
-    border: 2px solid white;
+    border: 2px solid #131921;
 }
 
 .nav-main {
@@ -153,3 +164,21 @@
     width: 43px;
     color: white;
 }
+
+.shopping-cart-num {
+    color: orange;
+    position: absolute;
+    right: 57px;
+    top: 4px;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: monospace;
+    z-index: 5;
+}
+
+.shopping-cart-icon {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(323deg) brightness(109%) contrast(101%);
+    width: 30px;
+    z-index: 2;
+}
+

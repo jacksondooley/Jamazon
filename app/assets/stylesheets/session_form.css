@@ -104,3 +104,21 @@ span {
 .linkedin {
     padding: 10px 10px 10px 10px;
 }
+
+.session-logo {
+    padding: 20px;
+    width: 200px;
+}
+
+.session-logo-container > a {
+    display: flex;
+    align-items: center;
+}
+
+.j {
+ position: absolute;
+ font-family:Georgia, 'Times New Roman', Times, serif;
+ font-size: 70px;
+ top: 3px;
+}
+

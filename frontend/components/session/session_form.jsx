@@ -115,7 +115,12 @@ class SessionForm extends React.Component {
 
         return (
             <div className="session-container">
-                <Link to="/"><h1>Jamazon</h1></Link>
+                <div className="session-logo-container">
+                    <Link to="/">
+                        <div className="j">j</div> 
+                        <img className="session-logo" src="/assets/amazon_logo.svg"/>
+                    </Link>
+                </div>
                 <div className="session-form">
                     <div className="session-title">
                         <h2>{capitalize(this.props.formType)}</h2>
