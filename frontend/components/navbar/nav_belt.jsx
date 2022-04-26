@@ -5,10 +5,17 @@ import ShoppingCartContainer from "./shopping_cart_container";
 
 const NavBelt = () => (
     <div className="nav-belt">
-        <h1>Jamazon Logo Placeholder</h1>
-        <SearchBarContainer />
-        <GreetingContainer />
-        <ShoppingCartContainer />
+        <div className="logo-padding">  
+            <h1 className="logo">Jamazon Logo Placeholder</h1>
+        </div>
+            <SearchBarContainer />
+        <div className="greeting-padding">
+            <GreetingContainer />
+        </div>
+        <div >
+            <ShoppingCartContainer />
+        </div>
+        
     </div>
 )
 

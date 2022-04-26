@@ -1,6 +1,6 @@
 import React from "react"
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import DemoUser from "./demo_user";
 import SessionErrors from "./session_errors";
 import SessionFooter from "./session_footer";
@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleStartDemo = this.handleStartDemo.bind(this)
     }
 
     handleSubmit(e) {
@@ -38,9 +39,46 @@ class SessionForm extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleClick(e) {
-        e.preventDefault()
-        <Route
+    // handleClick(e) {
+    //     e.preventDefault()
+    // }
+
+    async handleStartDemo() {
+        const demoEmail = "demouser@gmail.com"
+        const demoPassword = "password"
+        const demoName = 'Demo User'
+        let emailIndex = 0
+        while (emailIndex <= demoEmail.length) {
+            await this.timeout(100)
+            this.setState({ email: demoEmail.slice(0, emailIndex)})
+            emailIndex++
+        }
+        if (this.props.formType === 'signup') {
+            let nameIndex = 0
+            while (nameIndex <= demoName.length) {
+                await this.timeout(100)
+                this.setState({ name: demoName.slice(0, nameIndex) })
+                nameIndex++
+            }
+        }
+        let passwordIndex = 0
+        while (passwordIndex <= demoPassword.length) {
+            await this.timeout(100)
+            this.setState({ password: demoPassword.slice(0, passwordIndex) })
+            passwordIndex++
+        }
+        await this.timeout(200)
+        if (this.props.formType === 'signup') {
+            let {email, name, password} = this.state
+            this.props.processForm({ email: email + (Math.random() * 1000000000), name, password })
+        }
+        else {
+            this.props.processForm(this.returnState())
+        }
+    }
+
+    timeout(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
     }
     
 
@@ -96,7 +134,7 @@ class SessionForm extends React.Component {
                         <label htmlFor="">Password
                             <input 
                                 className="session-input"
-                                type="text"
+                                type="password"
                                 name='password'
                                 value={this.state.password}
                                 onChange={this.handleChange}
@@ -105,7 +143,7 @@ class SessionForm extends React.Component {
                         <SessionErrors errors={this.props.errors} />
                         <input className="button" type="submit" value={capitalize(this.props.formType)}/>
                     </form>
-                    <DemoUser handleChange={this.handleChange}/>
+                    <DemoUser handleStartDemo={this.handleStartDemo}/>
                 </div>
                 <div className="switch-form">
                    <h5 className="switch-form-text"><span>{oppForm() === 'signup' ? "Don't have an account yet?" : "Already have an account?"}</span></h5>

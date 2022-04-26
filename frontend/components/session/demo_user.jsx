@@ -4,22 +4,11 @@ import { Redirect } from "react-router-dom";
 
 const DemoUser = (props) => {
 
-  const startDemo = () => {
-    props.handleChange(e)
-  }
-
-
-
   return (
     <div>
-      {/* <input className="button" type="button" value="Demo User" /> */}
-      <Link to="/login" >
-        <button className="button" onClick={() => startDemo()}>
+        <button className="button" onClick={() => props.handleStartDemo()}>
           Demo User
         </button>
-      </Link>
-      
-
     </div>
   )
 }

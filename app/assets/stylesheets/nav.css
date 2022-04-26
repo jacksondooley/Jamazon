@@ -5,8 +5,9 @@
 .nav-belt {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #131921;
-    height: 70px;
+    height: 60px;
     color: #ffff;
 }
 
@@ -14,10 +15,11 @@
     display: flex;
     flex-direction: row;
     background-color: #232f3e;
-    height: 35px;
+    height: 39px;
 }
 
 .search-bar {
+    height: 44px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -25,26 +27,27 @@
 
 .search-bar-input {
     outline: 0;
-    height: 40px;
+    height: 38px;
     font-size: 20px;
     width: 100%;
 }
 
 .search-bar > select {
-    height: 46px;
+    height: 44px;
     font-size: 15px;
     border-radius: 5px 0px 0px 5px;
     background-color: rgb(233, 233, 233);
 }
 
-.search-bar-input:focus {
+.search-bar:focus-within {
     border: 3px solid #e9b42d;
-    box-shadow: 0 0 10px #e9b42d;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px #e9b42d; */
     transition: 0.3s;
 }
 
 .FaSearch {
-    height: 46px;
+    height: 44px;
     width: 40px;
     background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
     background-image: linear-gradient(#f7dfa5, #f0c14b);
@@ -70,4 +73,40 @@
 
 .greeting {
     display: flex;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    font-size: 18px;
+    border: 2px solid #131921;
+}
+
+.greeting-padding {
+    padding: 10px;
+}
+
+.greeting > a {
+    color: white;
+}
+
+.greeting>a:hover {
+    color: #f0ba32;
+}
+
+.greeting:hover {
+    border: 2px solid white;
+}
+
+
+.logo {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #131921;
+}
+
+.logo-padding {
+    padding: 10px;
+}
+
+.logo:hover {
+    border: 2px solid white;
 }
