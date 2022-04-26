@@ -12,7 +12,7 @@ const NavBelt = () => (
         <div className="greeting-padding">
             <GreetingContainer />
         </div>
-        <div >
+        <div className="shopping-cart-padding">
             <ShoppingCartContainer />
         </div>
         

@@ -13,6 +13,7 @@ class ShoppingCart extends React.Component {
         <IconContext.Provider value={{ size: "40px" }}>
           <FaShoppingCart/>
         </IconContext.Provider>
+        <img  src="/assets/cart.svg" />
       </div>
     )
   }

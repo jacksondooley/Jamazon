@@ -71,6 +71,14 @@
     padding-left: 10px;
 }
 
+.shopping-cart-padding {
+    border: 2px solid #131921;
+}
+
+.shopping-cart-padding:hover {
+    border: 2px solid white;
+}
+
 .greeting {
     display: flex;
     width: 130px;
@@ -109,4 +117,39 @@
 
 .logo:hover {
     border: 2px solid white;
+}
+
+.nav-main {
+    justify-content: center;
+}
+
+.nav-main-item > a {
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+.nav-main-item {
+    padding: 5px;
+    border: 2px solid #232f3e;
+}
+
+
+.nav-main-item:hover {
+    border: 2px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.nav-main-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.cart {
+    width: 43px;
+    color: white;
 }
