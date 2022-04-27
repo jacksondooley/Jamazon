@@ -69,3 +69,8 @@
       width: 100%;
       text-align: center;
  }
+
+ .splash {
+   font-family: AmazonEmber;
+   font-size: 100px;
+ }

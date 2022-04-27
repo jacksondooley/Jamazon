@@ -1,8 +1,8 @@
 import React from "react";
 
 const Splash = () => (
-  <div>
-    Splash
+  <div className="splash">
+    amazon
   </div>
 )
 
