@@ -1,0 +1,24 @@
+/* .product-page {
+    width: 100%;
+} */
+
+.product-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    position: absolute;
+    right: 0px;
+    padding-top: 50px;
+}
+
+.product-item {
+    font-family: AmazonEmber;
+}
+
+.product-count {
+    border-bottom: 2px solid gray;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: AmazonEmber;
+}

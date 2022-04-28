@@ -12,13 +12,13 @@ class allProducts extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="product-page">
+                <div className="product-count">
                     {this.props.products.length} Results for {this.props.categoryType} Products
                 </div>
-                <ul>
-                    {this.props.products.map((product) => (
-                        <ProductView product={product}/>
+                <ul className="product-container">
+                    {this.props.products.map((product, idx) => (
+                        <ProductView product={product} key={idx}/>
                     ))}
                 </ul>
             </div>
