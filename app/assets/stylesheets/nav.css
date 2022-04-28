@@ -182,3 +182,7 @@
     z-index: 2;
 }
 
+
+.nav-main-item > a {
+    font-family: AmazonEmber;
+}
