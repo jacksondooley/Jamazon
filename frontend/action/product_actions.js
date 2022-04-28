@@ -7,7 +7,7 @@ const receiveAllProducts = (products) => ({
     products
 })
 
-export const showAllProducts = () => dispatch (
+export const showAllProducts = () => dispatch => (
     ProductAPIUtil.showAllProducts()
         .then( (products) => dispatch(receiveAllProducts(products)))
 )

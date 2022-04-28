@@ -4,14 +4,15 @@ import Footer from "./footer";
 import { Switch, Route } from "react-router-dom";
 import Splash from "./splash";
 import CartContainer from "./cart_container";
+import AllProductsContainer from "../navbar/all_products_container";
 
 const Main = () => (
     <div>
         <NavBar />{/* Header */}
         <Switch>
             <Route path="/cart" component={CartContainer} />
-            {/* <Route path="/all" component={All}/>
-            <Route path="/books" component={Book} />
+            <Route path="/products" component={AllProductsContainer}/>
+            {/* <Route path="/books" component={Book} />
             <Route path="/electronics" component={Electronics} />
             <Route path="/furniture" component={Furniture} />
             <Route path="/clothes" component={Clothes} />

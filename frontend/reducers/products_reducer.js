@@ -5,10 +5,7 @@ const productsReducer = (state = {}, action) => {
     const newState = Object.assign({}, state)
     switch(action.type) {
         case RECEIVE_ALL_PRODUCTS:
-            action.products.map((product) => (
-                newState[product.id] = product
-            ))
-            return newState
+            return action.products
         default:
             return state
     }

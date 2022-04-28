@@ -1,4 +1,5 @@
 import React from "react";
+import ProductView from "./show_product";
 
 class allProducts extends React.Component {
     constructor(props) {
@@ -6,15 +7,18 @@ class allProducts extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getProducts()
+        this.props.fetchProducts()
     }
 
     render() {
         return (
             <div>
+                <div>
+                    {this.props.products.length} Results for {this.props.categoryType} Products
+                </div>
                 <ul>
                     {this.props.products.map((product) => (
-                        product.name
+                        <ProductView product={product}/>
                     ))}
                 </ul>
             </div>
