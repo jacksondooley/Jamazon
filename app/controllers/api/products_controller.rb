@@ -13,4 +13,8 @@ class Api::ProductsController < ApplicationController
         render json: @products
     end
 
+    def show
+
+    end
+
   end

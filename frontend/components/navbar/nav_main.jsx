@@ -11,31 +11,31 @@ const NavMain = () => (
                 <Link to="/products">All</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/books">Books</Link>
+                <Link to="/books">Books</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/electronics">Electronics</Link>
+                <Link to="/electronics">Electronics</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/furniture">Furniture</Link>
+                <Link to="/furniture">Furniture</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/clothes">Clothes</Link>
+                <Link to="/clothes">Clothes</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/jam">Jam</Link>
+                <Link to="/jam">Jam</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/groceries">Groceries</Link>
+                <Link to="/groceries">Groceries</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/office">Office</Link>
+                <Link to="/office">Office</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/toysandgames">Toys & Games</Link>
+                <Link to="/toysandgames">Toys & Games</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/products/petsupplies">Pet Supplies</Link>
+                <Link to="/petsupplies">Pet Supplies</Link>
             </div>
         </ul>
     </div>

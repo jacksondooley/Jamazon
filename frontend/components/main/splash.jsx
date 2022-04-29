@@ -2,7 +2,15 @@ import React from "react";
 
 const Splash = () => (
   <div className="splash">
-    amazon
+    <div>
+      Monthly Deal
+    </div>
+    <div>
+      Deal of the Day
+    </div>
+    <div>
+      Jamazon's Choice
+    </div>
   </div>
 )
 

@@ -18,8 +18,6 @@ class allProducts extends React.Component {
     }
 
 
-
-
     render() {
 
         const capitalize = (string = "") => {
