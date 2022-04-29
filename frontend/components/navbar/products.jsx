@@ -4,11 +4,13 @@ import ProductView from "./show_product";
 class allProducts extends React.Component {
     constructor(props) {
         super(props)
+
     }
 
     componentDidMount() {
-        this.props.fetchProducts()
+        this.props.fetchProducts(this.props.url.slice(9))
     }
+
 
     render() {
         return (

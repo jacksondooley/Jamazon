@@ -1,8 +1,9 @@
 
 
-export const showAllProducts = () => (
+export const showCategoryProducts = (category) => (
     $.ajax({
         method: 'GET',
-        url: '/api/products/'
+        url: `/api/products/`,
+        data: { category }
     })
 )

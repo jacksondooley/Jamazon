@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductView = (props) => (
     <li className="product-item">
-        <div>Image PlaceHolder</div>
+        <div className="img">Image PlaceHolder</div>
         <h5>
             {props.product.name}    
         </h5>
