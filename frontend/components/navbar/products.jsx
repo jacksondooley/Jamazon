@@ -11,8 +11,15 @@ class allProducts extends React.Component {
         this.props.fetchProducts(this.props.url.slice(9))
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.url !== prevProps.url) {
+            this.props.fetchProducts(this.props.url.slice(9))
+        }
+    }
+
 
     render() {
+
         return (
             <div className="product-page">
                 <div className="product-count">

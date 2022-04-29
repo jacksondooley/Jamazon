@@ -20,7 +20,7 @@ const Main = () => (
             {/* <Route path="/office" component={Office} />
             <Route path="/toysandgames" component={ToysNGames}
         <Route path="/petsupplies" component={PetSupplies} */}
-            <Route path="/products" component={ProductsContainer}/>
+            <Route exact path="/products" component={ProductsContainer}/>
             <Route path="/" exact component={Splash} />
         </Switch>
         <Footer />{/*  Footer */}
