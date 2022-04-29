@@ -8,22 +8,32 @@ class allProducts extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchProducts(this.props.url.slice(9))
+        this.props.fetchProducts(this.props.category)
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.url !== prevProps.url) {
-            this.props.fetchProducts(this.props.url.slice(9))
+        if (this.props.category !== prevProps.category) {
+            this.props.fetchProducts(this.props.category)
         }
     }
 
 
+
+
     render() {
+
+        const capitalize = (string = "") => {
+            if (string === "") {
+                return 'All Products'
+            } else {
+                return string.charAt(0).toUpperCase() + string.slice(1)
+            }
+        }
 
         return (
             <div className="product-page">
                 <div className="product-count">
-                    {this.props.products.length} Results for {this.props.categoryType} Products
+                    {this.props.products.length} Results for {capitalize(this.props.category)}
                 </div>
                 <ul className="product-container">
                     {this.props.products.map((product, idx) => (

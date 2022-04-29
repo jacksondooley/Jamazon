@@ -8,22 +8,14 @@ import ProductsContainer from "../navbar/products_container";
 
 const Main = () => (
     <div>
-        <NavBar />{/* Header */}
+        <NavBar />
         <Switch>
             <Route path="/cart" component={CartContainer} />
-            <Route path="/products/books" component={ProductsContainer} />
-            {/* <Route path="/electronics" component={Electronics} />
-            <Route path="/furniture" component={Furniture} />
-            <Route path="/clothes" component={Clothes} />
-        <Route path="/jam" component={Jams} /> */}
-            <Route path="/products/groceries" component={ProductsContainer} />
-            {/* <Route path="/office" component={Office} />
-            <Route path="/toysandgames" component={ToysNGames}
-        <Route path="/petsupplies" component={PetSupplies} */}
-            <Route exact path="/products" component={ProductsContainer}/>
+            <Route path="/products/:category" component={ProductsContainer} />
+            <Route path="/products" component={ProductsContainer}/>
             <Route path="/" exact component={Splash} />
         </Switch>
-        <Footer />{/*  Footer */}
+        <Footer />
     </div>
 )
 

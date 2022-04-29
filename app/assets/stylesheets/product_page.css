@@ -18,6 +18,11 @@
     font-family: AmazonEmber;
 }
 
+.product-item:hover {
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+}
+
 .img {
     height: 200px;
 }
@@ -29,4 +34,8 @@
     align-items: center;
     padding-left: 20px;
     font-family: AmazonEmber;
+}
+
+.product-rating {
+    filter: invert(88%) sepia(54%) saturate(1731%) hue-rotate(319deg) brightness(99%) contrast(91%);
 }
