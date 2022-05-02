@@ -23,7 +23,7 @@ const NavMain = () => (
                 <Link to="/clothes">Clothes</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/jam">Jam</Link>
+                <Link to="/jams">Jams</Link>
             </div>
             <div className="nav-main-item">
                 <Link to="/groceries">Groceries</Link>

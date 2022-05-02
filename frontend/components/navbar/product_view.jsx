@@ -3,7 +3,8 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs"
 import { Link } from "react-router-dom"
 
 const ratingStars = (rating) => {
-    let fullStars = Math.floor(rating / 1)
+    let fullStars = rating
+
     const starsArr = []
     for (let stars = 0; stars < 5; stars++) {
         if (fullStars > 1) {
@@ -38,7 +39,9 @@ const getDeliveryDate = () => {
 const ProductView = (props) => (
     <li className="product-item">
         <Link to={`/products/${props.product.id}`}>
-            <div className="img">Image PlaceHolder</div>
+            <div className="img">
+                <img src={`${props.product.photoUrl}`} alt="" />
+            </div>
             <h5>
                 {props.product.name}  
             </h5>

@@ -1,13 +1,19 @@
 import * as ProductAPIUtil from './../util/products_api_util'
 
 export const RECEIVE_ALL_PRODUCTS = "RECEIVE_ALL_PRODUCTS"
+export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT"
 
 const receiveAllProducts = (products) => ({
     type: RECEIVE_ALL_PRODUCTS,
     products
 })
 
-export const showCategoryProducts = (category) => dispatch => (
-    ProductAPIUtil.showCategoryProducts(category)
+const receiveProduct = (product) => ({
+    type: RECEIVE_PRODUCT,
+    product
+})
+
+export const indexCategoryProducts = (category) => dispatch => (
+    ProductAPIUtil.indexCategoryProducts(category)
         .then( (products) => dispatch(receiveAllProducts(products)))
 )

@@ -1,5 +1,5 @@
 import React from "react";
-import ProductView from "./show_product";
+import ProductView from "./product_view";
 
 class allProducts extends React.Component {
     constructor(props) {

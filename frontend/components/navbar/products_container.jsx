@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { showCategoryProducts } from "../../action/product_actions";
+import { indexCategoryProducts } from "../../action/product_actions";
 import products from "./products";
 
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchProducts: (categoryType) => dispatch(showCategoryProducts(categoryType)),
+    fetchProducts: (categoryType) => dispatch(indexCategoryProducts(categoryType)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(products)

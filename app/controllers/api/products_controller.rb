@@ -7,14 +7,15 @@ class Api::ProductsController < ApplicationController
             @products = Product.all
         else
             @products = Product
-                .select(:id, :name, :description, :price, :rating)
+                .select(:id, :name, :description, :price, :rating, :category)
                 .where(category: params[:category])
         end
-        render json: @products
+        render :index
     end
 
     def show
-
+        @product = Product.find(id: params[:id])
+        render :show
     end
 
   end

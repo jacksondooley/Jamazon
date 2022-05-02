@@ -24,7 +24,15 @@
 }
 
 .img {
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+}
+
+img {
+    max-height: 250px;
+    max-width: 250px;
 }
 
 .product-count {
