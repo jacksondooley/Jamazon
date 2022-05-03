@@ -10,43 +10,6 @@
 require 'open-uri'
 Product.destroy_all
 
-# groceryProducts = Product.create([
-#     {name: 'bag of pears',
-#     description: 'one pound bag of pears',
-#     category: 'groceries',
-#     price: 9.99,
-#     rating: 4.4},
-#     {name: 'bundle of carrots',
-#     description: 'one pound bundle of organic carrots',
-#     category: 'groceries',
-#     price: 8.99,
-#     rating: 3.5},
-#     {name: 'watermelon',
-#     description: 'whole organic watermelon',
-#     category: 'groceries',
-#     price: 6.99,
-#     rating: 4},
-#     {name: 'spaghetti',
-#     description: 'one pound bag of spaghetti',
-#     category: 'groceries',
-#     price: 3.99,
-#     rating: 3.9},
-#     {name: 'bag of oranges',
-#     description: 'one pound bag of organic oranges',
-#     category: 'groceries',
-#     price: 7.99,
-#     rating: 4.9}
-# ])
-
-# bookProduct1 = Product.create(
-#     {name: '',
-#     description: '',
-#     category: 'books',
-#     price: ,
-#     rating: })
-
-# file = open('')
-# bookProduct1.photo.attach(io: file, filename: 'hailMary.jpg')
 
 bookProduct1 = Product.create(
     {name: 'Project Hail Mary: A Novel',

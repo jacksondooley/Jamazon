@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewsContainer from "./reviews_container";
 
 class ShowProduct extends React.Component {
     constructor(props) {
@@ -11,25 +12,38 @@ class ShowProduct extends React.Component {
 
 
     render() {
+        console.log(this.props)
         return (
-            <div>
-                <div>
-                    <img src={`${this.props.product.photoUrl}`} alt="" />
-                </div>
-                <div>
-                    <h2>
-                        {this.props.product.name}
-                    </h2>
-                    {this.props.product.rating}
+            <>
+                <div className="show-product-container">
                     <div>
-                        Price: {this.props.product.price}
+                        <img src={`${this.props.product.photoUrl}`} alt="" />
                     </div>
-                    {this.props.product.description}
+                    <div className="show-product-mid">
+                        <h1>
+                            {this.props.product.name}
+                        </h1>
+                        {this.props.product.rating}
+                        <div>
+                            Price: {this.props.product.price}
+                        </div>
+                        <h2>About this item</h2>
+                        {this.props.product.description}
+                    </div>
+                    <div className="show-product-cart">
+                        <div>{this.props.product.price}</div>
+                        <div>Free Delivery:</div>
+                        <div>Fastest Delivery:</div>
+                        <div>Qty</div>
+                        <button className="button" value="Add to cart"/>
+                        <div>Secure Transaction</div>
+                        <div>Ships from</div>
+                        <div>Sold by</div>
+                        <div>Return Policy</div>
+                    </div>
                 </div>
-                <div>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
+                <ReviewsContainer/>
+            </>
         )
     }
 }

@@ -1,0 +1,22 @@
+.show-product-container {
+    display: flex;
+    justify-content: center;
+}
+
+.show-product-mid {
+    width: 500px;
+}
+
+.show-product-cart {
+    width: 200px;
+    height: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.show-product-cart > button {
+    width: 150px;
+}
