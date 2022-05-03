@@ -4,9 +4,8 @@ import ShowProduct from "./show_product";
 
 
 const mapStateToProps = (state, ownProps) => {
-//     debugger
     return {
-    product: Object.values(state.entities.products)
+    product: state.entities.products
 }
 }
 
