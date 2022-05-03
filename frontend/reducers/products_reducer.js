@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_PRODUCTS } from "../action/product_actions";
+import { RECEIVE_ALL_PRODUCTS, RECEIVE_PRODUCT } from "../action/product_actions";
 
 const productsReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -6,6 +6,10 @@ const productsReducer = (state = {}, action) => {
     switch(action.type) {
         case RECEIVE_ALL_PRODUCTS:
             return action.products
+        case RECEIVE_PRODUCT:
+            const dupState = {}
+            dupState[action.product.id] = action.product
+            return dupState
         default:
             return state
     }
