@@ -1,14 +1,49 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 
 require 'open-uri'
 Product.destroy_all
+User.destroy_all 
+Review.destroy_all
+
+ActiveRecord::Base.connection.reset_pk_sequence!("products")
+ActiveRecord::Base.connection.reset_pk_sequence!("users")
+ActiveRecord::Base.connection.reset_pk_sequence!("reviews")
+
+
+demouser = User.create(
+    name: 'Demo User',
+    email: 'demouser@gmail.com',
+    password: 'password'
+)
+
+user1 = User.create(
+    name: 'Jackson Dooley',
+    email: 'jacksondooley@hotmail.com',
+    password: 'password'
+)
+
+user1 = User.create(
+    name: 'Gilfoyle Li',
+    email: 'gilfoyle@hotmail.com',
+    password: 'password'
+)
+
+user1 = User.create(
+    name: 'Jim Nardi',
+    email: 'jim@hotmail.com',
+    password: 'password'
+)
+
+user1 = User.create(
+    name: 'Kyle Ginzburg',
+    email: 'kyle@hotmail.com',
+    password: 'password'
+)
+
+user1 = User.create(
+    name: 'Amin Babar',
+    email: 'amin@hotmail.com',
+    password: 'password'
+)
 
 
 bookProduct1 = Product.create(
@@ -512,8 +547,15 @@ jamsProduct6 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/jams/mango.jpg')
 jamsProduct6.photo.attach(io: file, filename: 'mango.jpg')
 
-
-
+1000.times do
+    Review.create(
+        title: Faker::GreekPhilosophers.quote,
+        body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 4),
+        rating: rand(2..5).to_i,
+        product_id: rand(0..34).to_i,
+        user_id: rand(1..5).to_i,
+    )
+end
 
 
 # Product1 = Product.create(

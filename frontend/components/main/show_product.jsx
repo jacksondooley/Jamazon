@@ -1,5 +1,6 @@
 import React from "react";
-import ReviewsContainer from "./reviews_container";
+import Reviews from "./reviews";
+// import ReviewsContainer from "./reviews_container";
 
 class ShowProduct extends React.Component {
     constructor(props) {
@@ -42,7 +43,9 @@ class ShowProduct extends React.Component {
                         <div>Return Policy</div>
                     </div>
                 </div>
-                <ReviewsContainer/>
+                <Reviews 
+                    reviews={this.props.product.reviews} 
+                    id={this.props.match.params.id}/>
             </>
         )
     }
