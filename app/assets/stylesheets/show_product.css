@@ -20,3 +20,28 @@
 .show-product-cart > button {
     width: 150px;
 }
+
+.reviews {
+    border-top: 1px solid rgb(205, 205, 205);
+    display: flex;
+    justify-content: center;
+    font-family: AmazonEmber;
+}
+
+.reviews > div {
+    width: 300px;
+}
+
+.reviews-left > h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+
+.reviews > ul {
+    width: 600px
+}
+
+.reviews > ul > li {
+    padding-bottom: 30px;
+}

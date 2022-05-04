@@ -1,9 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs"
+import { CgProfile } from "react-icons/cg"
+
+const ratingStars = (rating) => {
+    let fullStars = rating
+
+    const starsArr = []
+    for (let stars = 0; stars < 5; stars++) {
+        if (fullStars > 1) {
+            starsArr.push(<BsStarFill />)
+            fullStars -= 1
+        } else if (fullStars == 0) {
+            starsArr.push(<BsStar />)
+        } else {
+            if (fullStars < 0.3) {
+                starsArr.push(<BsStar />)
+            }
+            else if (fullStars > 0.7) {
+                starsArr.push(<BsStarFill />)
+            }
+            else {
+                starsArr.push(<BsStarHalf />)
+            }
+            fullStars = 0
+        }
+    }
+    return starsArr
+}
 
 const Reviews = (props) => (
-    <div>
-        <div>
+
+    <div className="reviews">
+        <div className="reviews-left">
             <h3>Customer reviews</h3>
             <div>
                 <div>
@@ -13,7 +42,7 @@ const Reviews = (props) => (
                     Share your thoughts with other customers
                 </div>
                 {console.log(props)}
-                <Link to={`products/${props.id}/review`}>
+                <Link to={`/products/${props.id}/review/new`}>
                     <button>Write a customer review</button>
                 </Link>
             </div>
@@ -22,18 +51,21 @@ const Reviews = (props) => (
             {props.reviews.map(review => (
                 <li>
                     <div>
-                        Author
+                        <CgProfile/>
+                        Author: {console.log(review)}
                     </div>
                     <div>
-                        {review.rating}{review.title}
+                        {ratingStars(review.rating)}{review.title}
                     </div>
                     <div>
                         {review.body}
                     </div>
+
                 </li>
             ))}
         </ul>
     </div>
+    
 )
 
 
