@@ -52,7 +52,7 @@ const Reviews = (props) => (
                 <li>
                     <div>
                         <CgProfile/>
-                        Author: {console.log(review)}
+                        {review.user?.name}
                     </div>
                     <div>
                         {ratingStars(review.rating)}{review.title}
@@ -60,7 +60,14 @@ const Reviews = (props) => (
                     <div>
                         {review.body}
                     </div>
-
+                    <div>
+                        <button>
+                            Edit
+                        </button>
+                        <button>
+                            Delete
+                        </button>
+                    </div>
                 </li>
             ))}
         </ul>

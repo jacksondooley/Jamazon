@@ -14,3 +14,4 @@ export const showProduct = (productId) => (
         url: `/api/products/${productId}`
     })
 )
+

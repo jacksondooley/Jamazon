@@ -4,6 +4,7 @@ import Root from "./components/root";
 import configureStore from "./store/store";
 import { signup, login, logout } from './action/session_actions';
 import * as APIUtil from './util/session_api_util'
+import * as ReviewAPIUtil from './util/reviews_api_util'
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.ajaxlogin = APIUtil.login
   window.ajaxsignup = APIUtil.signup
   window.ajaxlogout = APIUtil.logout
+  window.createReview = ReviewAPIUtil.createReview
 
 
   ReactDOM.render(<Root store={store}/>, root);

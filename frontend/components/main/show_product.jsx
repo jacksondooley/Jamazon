@@ -63,7 +63,7 @@ class ShowProduct extends React.Component {
                         <div>Free Delivery:</div>
                         <div>Fastest Delivery:</div>
                         <div>Qty</div>
-                        <button className="button" value="Add to cart"/>
+                        <button className="button">Add to Cart</button>
                         <div>Secure Transaction</div>
                         <div>Ships from</div>
                         <div>Sold by</div>
