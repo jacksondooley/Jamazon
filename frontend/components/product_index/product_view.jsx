@@ -30,7 +30,7 @@ const ratingStars = (rating) => {
 
 const getDeliveryDate = () => {
     const deliveryDate = new Date()
-    deliveryDate.setDate(deliveryDate.getDate() + 3)
+    deliveryDate.setDate(deliveryDate.getDate() + 6)
     return deliveryDate
 }
 

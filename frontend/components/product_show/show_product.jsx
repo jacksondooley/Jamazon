@@ -40,6 +40,30 @@ class ShowProduct extends React.Component {
         return starsArr
     }
 
+    getFreeDeliveryDate = () => {
+        const deliveryDate = new Date()
+        deliveryDate.setDate(deliveryDate.getDate() + 6)
+        return deliveryDate.toDateString().slice(0, 10)
+    }
+
+    getFastDeliveryDate = () => {
+        let deliveryDate = new Date()
+        deliveryDate.setDate(deliveryDate.getDate() + 3)
+        return deliveryDate.toDateString().slice(0, 10)
+    }
+
+    getOrderBeforeTime = () => {
+        const today = new Date()
+        let time = `${23- today.getHours()} hrs and ${59 - today.getMinutes()} mins.`
+        return time
+    }   
+
+    getReturnDate = () => {
+        const deliveryDate = new Date()
+        deliveryDate.setDate(deliveryDate.getDate() + 60)
+        return deliveryDate.toDateString().slice(0, 10)
+    }
+
 
     render() {
         console.log(this.props)
@@ -74,73 +98,100 @@ class ShowProduct extends React.Component {
                         {this.props.product?.description}
                     </div>
                     <div className="show-product-cart">
-                        <div className="show-price">
-                            ${this.props.product?.price}
-                        </div>
-                        <div className="show-delivery-free">
-                            Free Delivery:
-                        </div>
-                        <div className="show-delivery-fast">
-                            Fastest Delivery:
-                        </div>
-                        <div className="show-stock">
-                            In Stock.
-                        </div>
-                        <div>
-                            <form action="">
+                        <div className="show-product-cart-inner">
 
-                            </form>
-                            <label htmlFor="">
-                                Qty
-                                <select name="qty" id="qty" value="qty">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                </select>
-                            </label>
-                            <button className="button3">Buy Now</button>
-                            <button className="button4">Add to Cart</button>
+                            <div className="show-price">
+                                ${this.props.product?.price}
+                            </div>
+                            <div className="show-delivery-free">
+                                Free Delivery:
+                                <span>
+                                    {this.getFreeDeliveryDate()}
+                                </span>
+                            </div>
+                            <div className="show-delivery-fast">
+                                <span className="show-delivery-text">
+                                    Fastest Delivery
+                                </span>
+                                <span className="show-delivery-date">
+                                    {this.getFastDeliveryDate()}.
+                                </span>
+                                <span className="show-delivery-order">
+                                    Order within
+                                </span>
+                                <span className="show-delivery-time">
+                                    {this.getOrderBeforeTime()}
+                                </span>
+                            </div>
+                            <div className="show-stock">
+                                In Stock.
+                            </div>
+                            <div className="show-form">
+                                <form action="">
+
+                                </form>
+                                <label htmlFor="">
+                                    Qty
+                                    <select name="qty" id="qty" value="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                </label>
+                                <div className="show-button-container">
+                                    <button className="button3">Buy Now</button>
+                                </div>
+                                <div className="show-button-container">
+                                    <button className="button4">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div className="secure-transaction">
+                                <div className="secure-transaction-icon">
+                                    <FaLock />
+                                </div>
+                                <div className="secure-transaction-text">
+                                    Secure Transaction
+                                </div>
+                            </div>
+                            <div className="show-ship-container">
+                                <div>
+                                    Ships from
+                                </div>
+                                <div className="show-jamazon">
+                                    Jamazon.com
+                                </div>
+                            </div>
+                            <div className="show-sold-container">
+                                <div>
+                                    Sold by
+                                </div>
+                                <div className="show-jamazon">
+                                    Jamazon.com
+                                </div>
+                            </div>
+                            <div className="show-return-container">
+                                <span className="show-return-policy">
+                                    Return Policy:
+                                </span>
+                                <span className="show-return-date">
+                                    Returnable until {this.getReturnDate()}
+                                </span>
+                            </div>
                         </div>
-                        <div className="secure-transaction">
-                            <div className="secure-transaction-icon">
-                                <FaLock />
-                            </div>
-                            <div className="secure-transaction-text">
-                                Secure Transaction
-                            </div>
-                        </div>
-                        <div className="show-ship-container">
-                            <div>
-                                Ships from
-                            </div>
-                            <div className="show-jamazon">
-                                Jamazon.com
-                            </div>
-                        </div>
-                        <div className="show-sold-container">
-                            <div>
-                                Sold by
-                            </div>
-                            <div className="show-jamazon">
-                                Jamazon.com
-                            </div>
-                        </div>
-                        <div>Return Policy</div>
                     </div>
-                </div>
 
+                </div>
                 <ReviewsContainer 
                     reviews={this.props.product?.reviews} 
                     id={this.props.match.params.id}
                     avg_rating={this.props.product?.avg_rating}
                     review_count={this.props.product?.review_count}
                 />
-
             </div>
         )
     }
