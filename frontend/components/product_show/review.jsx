@@ -27,27 +27,36 @@ const Review = (props) => {
 
     return (
         <li>
-            <div>
-                <CgProfile/>
-                {props.review.user?.name}
+            <div className="review-profile">
+                <div className="review-profile-pic">
+                    <CgProfile/>
+                </div>
+                <div>
+                    {props.review.user?.name}
+                </div>
             </div>
-            <div>
-                {ratingStars(props.review.rating)}{props.review.title}
+            <div className="review-header">
+                <div className="stars">
+                    {ratingStars(props.review.rating)}
+                </div>
+                <div className="review-title">
+                    {props.review.title}
+                </div>
             </div>
-            <div>
+            <div className="review-date">
                 Reviewed on {formatDate(props.review.created_at)}
             </div>
-            <div>
+            <div className="review-purchase">
                 Verified Purchase
             </div>
             <div>
                 {props.review.body}
             </div>
-            {props.review.user.id === props.currentUserId ? <div>
-                <button>
-                    Edit
+            {props.review.user.id === props.currentUserId ? <div className="review-buttons">
+                <button className="button2">
+                    Edit Review
                 </button>
-                <button onClick={(() => props.deleteReview(props.review.id))}>
+                <button onClick={(() => props.deleteReview(props.review.id))} className="button2">
                     Delete
                 </button>
             </div> : <div></div>}

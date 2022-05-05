@@ -48,9 +48,11 @@ class Reviews extends React.Component {
         <div className="reviews-left">
             <h3>Customer reviews</h3>
             <div>
-                {this.ratingStars(this.props?.avg_rating)}
+                <div className="stars">
+                    {this.ratingStars(this.props?.avg_rating)}
+                </div>
                 <div>
-                {Math.round(this.props?.avg_rating * 10) / 10} out of 5
+                    {Math.round(this.props?.avg_rating * 10) / 10} out of 5
                 </div>
             </div>
             <div>

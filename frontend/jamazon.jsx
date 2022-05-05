@@ -23,18 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-
   window.getState = store.getState
-  window.dispatch = store.dispatch
-  window.user = {email: 'kevin@gmail.com', password: 'password'}
-  window.user2 = {name: 'bry', email: 'bry@bry.com', password: 'password'}
-  window.login = login
-  window.signup = signup
-  window.logout = logout
-  window.ajaxlogin = APIUtil.login
-  window.ajaxsignup = APIUtil.signup
-  window.ajaxlogout = APIUtil.logout
-  window.createReview = ReviewAPIUtil.createReview
 
 
   ReactDOM.render(<Root store={store}/>, root);

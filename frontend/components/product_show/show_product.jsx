@@ -45,14 +45,21 @@ class ShowProduct extends React.Component {
         return (
             <div>
                 <div className="show-product-container">
-                    <div>
+                    <div className="show-product-img">
                         <img src={`${this.props.product?.photoUrl}`} alt="" />
                     </div>
                     <div className="show-product-mid">
                         <h1>
                             {this.props.product?.name}
                         </h1>
-                        {this.ratingStars(this.props.product?.avg_rating)} {this.props.product?.review_count} ratings
+                        <div>
+                            <div className="stars">
+                                {this.ratingStars(this.props.product?.avg_rating)} 
+                            </div>
+                            <div>
+                                {this.props.product?.review_count} ratings
+                            </div>
+                        </div>
                         <div>
                             Price: {this.props.product?.price}
                         </div>
@@ -64,7 +71,7 @@ class ShowProduct extends React.Component {
                         <div>Free Delivery:</div>
                         <div>Fastest Delivery:</div>
                         <div>Qty</div>
-                        <button className="button">Add to Cart</button>
+                        <button className="button3">Add to Cart</button>
                         <div>Secure Transaction</div>
                         <div>Ships from</div>
                         <div>Sold by</div>

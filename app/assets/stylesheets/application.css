@@ -77,3 +77,7 @@
  .product-page {
     min-height: auto;
  }
+
+ .stars {
+   filter: invert(88%) sepia(54%) saturate(1731%) hue-rotate(319deg) brightness(99%) contrast(91%);
+ }
