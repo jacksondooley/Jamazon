@@ -52,7 +52,7 @@ class ShowProduct extends React.Component {
                         <h1>
                             {this.props.product?.name}
                         </h1>
-                        {this.ratingStars(this.props.product?.rating)} {this.props.product?.reviews.length} ratings
+                        {this.ratingStars(this.props.product?.avg_rating)} {this.props.product?.review_count} ratings
                         <div>
                             Price: {this.props.product?.price}
                         </div>
@@ -75,6 +75,8 @@ class ShowProduct extends React.Component {
                 <ReviewsContainer 
                     reviews={this.props.product?.reviews} 
                     id={this.props.match.params.id}
+                    avg_rating={this.props.product?.avg_rating}
+                    review_count={this.props.product?.review_count}
                 />
 
             </div>

@@ -17,7 +17,9 @@ const NavBelt = () => (
             <GreetingContainer />
         </div>
         <div className="shopping-cart-padding">
-            <ShoppingCartContainer />
+            <Link to="/cart">
+                <ShoppingCartContainer />
+            </Link>
         </div>
         
     </div>

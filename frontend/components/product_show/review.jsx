@@ -17,20 +17,13 @@ const ratingStars = (rating) => {
     return starsArr
 }
 
+const formatDate = (date) => {
+    const dateArray = new Date(date).toDateString().split(' ')
+    const dateString = `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
+    return dateString
+}
+
 const Review = (props) => {
-    {console.log(props)}
-
-
-    // currentUserButtons() (
-    //     <div>
-    //         <button>
-    //             Edit
-    //         </button>
-    //         <button onClick={(() => props.deleteReview(props.review.id))}>
-    //             Delete
-    //         </button>
-    //     </div>
-    // )
 
     return (
         <li>
@@ -42,9 +35,22 @@ const Review = (props) => {
                 {ratingStars(props.review.rating)}{props.review.title}
             </div>
             <div>
+                Reviewed on {formatDate(props.review.created_at)}
+            </div>
+            <div>
+                Verified Purchase
+            </div>
+            <div>
                 {props.review.body}
             </div>
-            {/* {props.review.user.id === props.currentUserId ? this.currentUserButtons() : <div></div>} */}
+            {props.review.user.id === props.currentUserId ? <div>
+                <button>
+                    Edit
+                </button>
+                <button onClick={(() => props.deleteReview(props.review.id))}>
+                    Delete
+                </button>
+            </div> : <div></div>}
         </li>
     )
 }

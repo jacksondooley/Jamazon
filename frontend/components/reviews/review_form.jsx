@@ -1,19 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-class NewReview extends React.Component {
+class ReviewForm extends React.Component {
   constructor(props) {
     super(props)
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.setRating = this.setRating.bind(this)
-    this.state = {
-      user_id: this.props.userId,
-      product_id: this.props.match.params.id,
-      rating: 0,
-      title: "",
-      body: ""
-    }
+    this.state = this.props.review
   }
 
   handleSubmit(e) {
@@ -34,10 +28,14 @@ class NewReview extends React.Component {
   render() {
     return (
       <div>
-        Create Review
+        <h1>Create Review</h1>
+        <div>
+          <img src={`${this.props.product.photoUrl}`}/>
+          <div>{this.props.product.name}</div>
+        </div>
         <form action="" onSubmit={this.handleSubmit}>
           <div onChange={this.setRating}>
-            Rating
+            <div>Overall rating</div>
             <label>
               <input type="radio" id="1" name="rating" value="1"/>
             </label>
@@ -55,7 +53,7 @@ class NewReview extends React.Component {
             </label>
           </div>
           <label htmlFor="">
-            Title
+            <div>Add a headline</div>
             <input 
               type="text" 
               placeholder="What's most important to know?"
@@ -63,7 +61,7 @@ class NewReview extends React.Component {
             />
           </label>
           <label htmlFor="">
-            Add a review
+            <div>Add a written review</div>
             <input 
               type="text" 
               placeholder="What did you like or dislike? What did you use this product for?"
@@ -77,4 +75,4 @@ class NewReview extends React.Component {
   }
 }
 
-export default NewReview
+export default ReviewForm
