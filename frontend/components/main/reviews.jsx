@@ -22,15 +22,19 @@ class Reviews extends React.Component {
                 <div>
                     Share your thoughts with other customers
                 </div>
-                {console.log(props)}
-                <Link to={`/products/${props?.id}/review/new`}>
+                {console.log(this.props)}
+                <Link to={`/products/${this.props?.id}/review/new`}>
                     <button>Write a customer review</button>
                 </Link>
             </div>
         </div>
         <ul>
-            {props?.reviews.map(review => (
-                <Review review={review} currentUserId={currentUserId} deleteReview={this.props?.deleteReview}/>
+            {this.props.reviews?.map(review => (
+                <Review 
+                    review={review} 
+                    deleteReview={this.props.deleteReview}
+                    currentUserId={this.props.currentUserId}
+                />
             ))}
         </ul>
     </div>

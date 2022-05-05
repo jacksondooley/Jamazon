@@ -46,7 +46,8 @@ const ProductView = (props) => (
                 {props.product.name}  
             </h5>
             <div className="product-rating">
-                {ratingStars(props.product.rating)}
+                {ratingStars(props.product.avg_rating)}
+                {props.product.review_count}
             </div>
             <div className="product-price">
                 <div className="product-price-sign">

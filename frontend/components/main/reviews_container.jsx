@@ -3,9 +3,14 @@ import Reviews from "./reviews";
 import { deleteReview } from "../../action/review_actions";
 
 
-const mapStateToProps = (state) => ({
-    currentUserId: state.session.id
-})
+const mapStateToProps = (state, ownProps) => {
+    console.log(ownProps)
+    return ({
+        currentUserId: state.session.id,
+        // id: ownProps.match.params.id,
+        // reviews: ownProps.reviews
+    })
+}
 
 
 const mapDispatchToProps = dispatch => ({

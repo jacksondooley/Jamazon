@@ -1,6 +1,7 @@
 import React from "react";
 import Reviews from "./reviews";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs"
+import ReviewsContainer from "./reviews_container";
 
 class ShowProduct extends React.Component {
     constructor(props) {
@@ -45,21 +46,21 @@ class ShowProduct extends React.Component {
             <div>
                 <div className="show-product-container">
                     <div>
-                        <img src={`${this.props.product.photoUrl}`} alt="" />
+                        <img src={`${this.props.product?.photoUrl}`} alt="" />
                     </div>
                     <div className="show-product-mid">
                         <h1>
-                            {this.props.product.name}
+                            {this.props.product?.name}
                         </h1>
-                        {this.ratingStars(this.props.product.rating)} {this.props.product.reviews.length} ratings
+                        {this.ratingStars(this.props.product?.rating)} {this.props.product?.reviews.length} ratings
                         <div>
-                            Price: {this.props.product.price}
+                            Price: {this.props.product?.price}
                         </div>
                         <h2>About this item</h2>
-                        {this.props.product.description}
+                        {this.props.product?.description}
                     </div>
                     <div className="show-product-cart">
-                        <div>{this.props.product.price}</div>
+                        <div>{this.props.product?.price}</div>
                         <div>Free Delivery:</div>
                         <div>Fastest Delivery:</div>
                         <div>Qty</div>
@@ -70,9 +71,12 @@ class ShowProduct extends React.Component {
                         <div>Return Policy</div>
                     </div>
                 </div>
-                <Reviews 
-                    reviews={this.props.product.reviews} 
-                    id={this.props.match.params.id}/>
+
+                <ReviewsContainer 
+                    reviews={this.props.product?.reviews} 
+                    id={this.props.match.params.id}
+                />
+
             </div>
         )
     }
