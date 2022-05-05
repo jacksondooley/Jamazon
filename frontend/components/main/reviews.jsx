@@ -1,35 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs"
-import { CgProfile } from "react-icons/cg"
+import Review from "./review";
 
-const ratingStars = (rating) => {
-    let fullStars = rating
 
-    const starsArr = []
-    for (let stars = 0; stars < 5; stars++) {
-        if (fullStars > 1) {
-            starsArr.push(<BsStarFill />)
-            fullStars -= 1
-        } else if (fullStars == 0) {
-            starsArr.push(<BsStar />)
-        } else {
-            if (fullStars < 0.3) {
-                starsArr.push(<BsStar />)
-            }
-            else if (fullStars > 0.7) {
-                starsArr.push(<BsStarFill />)
-            }
-            else {
-                starsArr.push(<BsStarHalf />)
-            }
-            fullStars = 0
-        }
+
+class Reviews extends React.Component {
+    constructor(props) {
+        super(props)
     }
-    return starsArr
-}
 
-const Reviews = (props) => (
+    render() {
+        return (
 
     <div className="reviews">
         <div className="reviews-left">
@@ -42,38 +23,22 @@ const Reviews = (props) => (
                     Share your thoughts with other customers
                 </div>
                 {console.log(props)}
-                <Link to={`/products/${props.id}/review/new`}>
+                <Link to={`/products/${props?.id}/review/new`}>
                     <button>Write a customer review</button>
                 </Link>
             </div>
         </div>
         <ul>
-            {props.reviews.map(review => (
-                <li>
-                    <div>
-                        <CgProfile/>
-                        {review.user?.name}
-                    </div>
-                    <div>
-                        {ratingStars(review.rating)}{review.title}
-                    </div>
-                    <div>
-                        {review.body}
-                    </div>
-                    <div>
-                        <button>
-                            Edit
-                        </button>
-                        <button>
-                            Delete
-                        </button>
-                    </div>
-                </li>
+            {props?.reviews.map(review => (
+                <Review review={review} currentUserId={currentUserId} deleteReview={this.props?.deleteReview}/>
             ))}
         </ul>
     </div>
-    
-)
+
+        )
+    }
+
+}
 
 
 export default Reviews
