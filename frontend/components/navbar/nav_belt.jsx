@@ -8,8 +8,7 @@ const NavBelt = () => (
     <div className="nav-belt">
         <div className="logo-padding">  
             <Link to="/">
-                <div className="logo-j">J</div>
-                <img className="logo" src="/assets/amazon_logo.svg" />
+                <img className="logo" src="https://jamazon-seeds.s3.amazonaws.com/jamzon_logo.png" />
             </Link>
         </div>
             <SearchBarContainer />

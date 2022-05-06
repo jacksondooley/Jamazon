@@ -117,8 +117,7 @@ class SessionForm extends React.Component {
             <div className="session-container">
                 <div className="session-logo-container">
                     <Link to="/">
-                        <div className="j">j</div> 
-                        <img className="session-logo" src="/assets/amazon_logo.svg"/>
+                        <img className="session-logo" src="https://jamazon-seeds.s3.amazonaws.com/jamzon_logo.png"/>
                     </Link>
                 </div>
                 <div className="session-form">
