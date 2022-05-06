@@ -6,7 +6,7 @@ class Cart extends React.Component {
     return (
       <div>
         <div className="kettle-container">
-          <img className="kettle-img" src="/assets/kettle-desaturated.svg" />
+          <img className="kettle-img" src="https://jamazon-seeds.s3.amazonaws.com/kettle-desaturated.svg" />
           <h1>
             Your Jamazon Cart is Empty
           </h1>

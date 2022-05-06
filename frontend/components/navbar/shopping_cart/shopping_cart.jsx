@@ -14,7 +14,7 @@ class ShoppingCart extends React.Component {
           <FaShoppingCart/>
         </IconContext.Provider> */}
         <div className="shopping-cart-num">0</div>
-        <img  className="shopping-cart-icon" src="/assets/cart.svg" />
+        <img  className="shopping-cart-icon" src="https://jamazon-seeds.s3.amazonaws.com/cart.svg" />
         <div>Cart</div>
       </div>
     )
