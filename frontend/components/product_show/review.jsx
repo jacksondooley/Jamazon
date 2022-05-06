@@ -31,7 +31,7 @@ const Review = (props) => {
                 <div className="review-profile-pic">
                     <CgProfile/>
                 </div>
-                <div>
+                <div className="review-profile-name">
                     {props.review.user?.name}
                 </div>
             </div>

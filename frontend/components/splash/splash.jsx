@@ -36,18 +36,17 @@ class Splash extends React.Component {
                 </div>
                 <div className="item-img">
                   <Link to="/products/1">
-                    <img src="https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg" />
+                    <img src="https://m.media-amazon.com/images/I/31zxVniGbKL.jpg" />
                   </Link>
                 </div>
             </div>
             <div className="item-card">
                 <div>
-                
-
+                  King Ka's Recommendation
                 </div>
                 <div className="item-img">
-                  <Link to="/products/1">
-                    <img src="https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg" />
+                  <Link to="/products/14">
+                    <img src="https://jamazon-seeds.s3.amazonaws.com/electronics/webcam.jpg" />
                   </Link>
                 </div>
             </div>

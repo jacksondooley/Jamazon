@@ -58,11 +58,11 @@ class Reviews extends React.Component {
             <div className="reviews-global-ratings">
                 {this.props.review_count} global ratings
             </div>
-            <div>
-                <div>
+            <div className="reviews-bottom">
+                <h4>
                     Review this product
-                </div>
-                <div>
+                </h4>
+                <div className="reviews-share">
                     Share your thoughts with other customers
                 </div>
                 <Link to={`/products/${this.props?.id}/review/new`}>

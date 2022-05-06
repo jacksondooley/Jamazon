@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
         // avg_rating: state.entities.product[0].avg_rating,
         // review_count: state.entities.product[0].review_count
         // reviews: ownProps.reviews
+        revonk: state.entities.reviews
     })
 }
 

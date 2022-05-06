@@ -3,7 +3,8 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.save
-    render json: @review
+    @product = @review.product
+    render 'api/products/show'
   end
 
   def update
@@ -16,6 +17,8 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.delete
+    @product = @review.product
+    render 'api/products/show'
   end
 
   private
