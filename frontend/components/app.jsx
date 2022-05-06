@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import NavBar from "./navbar/nav_bar";
 import Footer from "./footer/footer";
 import Splash from "./splash/splash";
@@ -24,7 +24,7 @@ const App = () => {
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route path="/cart" component={CartContainer} />
-            <Route exact path="/products/:id/review/:crud" component={NewReviewContainer} />            
+            <ProtectedRoute exact path="/products/:id/review/:crud" component={NewReviewContainer} />            
             <Route path="/products/:id" component={show_product_container} />
             <Route exact path="/products" component={ProductsContainer}/>
             <Route path="/:category" component={ProductsContainer} />

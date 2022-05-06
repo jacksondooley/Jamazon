@@ -8,10 +8,10 @@ const ratingStars = (rating) => {
     const starsArr = []
     for (let stars = 0; stars < 5; stars++) {
         if (fullStars > 1) {
-            starsArr.push(<BsStarFill />)
+            starsArr.push(<BsStarFill key={stars}/>)
             fullStars -= 1
         } else {
-            starsArr.push(<BsStar />)
+            starsArr.push(<BsStar key={stars}/>)
         }
     }
     return starsArr

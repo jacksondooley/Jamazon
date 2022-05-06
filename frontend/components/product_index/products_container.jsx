@@ -5,8 +5,6 @@ import products from "./products";
 
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps) 
-
     return {
     category: ownProps.match.params.category,
     products: Object.values(state.entities.products)

@@ -18,7 +18,8 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.reviewAction(this.state)
+    this.props.reviewAction(this.state).then(()=>{
+      this.props.history.replace(`/products/${this.props.match.params.id}`)})
     // const history = useHistory()
     // () => history.push(`/products/${this.props.match.params.id}`)
   }

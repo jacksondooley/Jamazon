@@ -35,8 +35,8 @@ class allProducts extends React.Component {
                 </div>
                 <div className="product-container">
                     <ul className="product-list">
-                        {this.props.products.map((product, idx) => (
-                            <ProductView product={product} key={idx}/>
+                        {this.props.products.map((product, key) => (
+                            <ProductView key={key} product={product}/>
                         ))}
                     </ul>
 

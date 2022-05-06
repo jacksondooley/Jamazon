@@ -4,7 +4,6 @@ import Reviews from "./reviews";
 
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
     return ({
         currentUserId: state.session.id,
         // avg_rating: state.entities.product[0].avg_rating,

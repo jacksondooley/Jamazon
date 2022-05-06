@@ -20,6 +20,7 @@
     height: 400px;
     border-bottom: 2px solid gray;
     font-family: AmazonEmber;
+    margin-bottom: 20px;
 }
 
 .product-item:hover {

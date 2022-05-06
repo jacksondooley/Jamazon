@@ -21,7 +21,7 @@ const removeReview = (reviewId) => ({
 
 // export const fetchReviews = (productId) =>
 
-export const createReview = (review) => (
+export const createReview = (review) => dispatch => (
   ReviewAPIUtil.createReview(review)
     .then( (review) => dispatch(receiveReview(review)))
 )

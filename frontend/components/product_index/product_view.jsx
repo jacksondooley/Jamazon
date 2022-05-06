@@ -8,19 +8,19 @@ const ratingStars = (rating) => {
     const starsArr = []
     for (let stars = 0; stars < 5; stars++) {
         if (fullStars > 1) {
-            starsArr.push(<BsStarFill />)
+            starsArr.push(<BsStarFill key={stars}/>)
             fullStars -= 1
         } else if (fullStars == 0) {
-            starsArr.push(<BsStar />)
+            starsArr.push(<BsStar key={stars}/>)
         } else { 
             if (fullStars < 0.3) {
-                starsArr.push(<BsStar/>)
+                starsArr.push(<BsStar key={stars}/>)
             }
             else if (fullStars > 0.7) {
-                starsArr.push(<BsStarFill />)
+                starsArr.push(<BsStarFill key={stars}/>)
             }   
             else {
-                starsArr.push(<BsStarHalf/>)
+                starsArr.push(<BsStarHalf key={stars}/>)
             } 
             fullStars = 0
         }

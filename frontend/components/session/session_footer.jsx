@@ -4,7 +4,6 @@ import { BsGithub, BsLinkedin } from "react-icons/bs"
 import { Route } from "react-router-dom";
 
 const click = () => {
-  console.log("yes")
   // < Route path = '/privacy-policy' component = {() => {
   //   window.location.href = 'https://github.com/jacksondooley';
   //   return null;
