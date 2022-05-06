@@ -13,9 +13,9 @@ class ShoppingCart extends React.Component {
         {/* <IconContext.Provider value={{ size: "40px" }}>
           <FaShoppingCart/>
         </IconContext.Provider> */}
-        <div className="shopping-cart-num">2</div>
+        <div className="shopping-cart-num">0</div>
         <img  className="shopping-cart-icon" src="/assets/cart.svg" />
-        <div>Your Amazon Cart is Empty</div>
+        <div>Cart</div>
       </div>
     )
   }

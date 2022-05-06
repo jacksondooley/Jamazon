@@ -47,13 +47,16 @@ class Reviews extends React.Component {
     <div className="reviews">
         <div className="reviews-left">
             <h3>Customer reviews</h3>
-            <div>
+            <div className="reviews-rating">
                 <div className="stars">
                     {this.ratingStars(this.props?.avg_rating)}
                 </div>
                 <div>
                     {Math.round(this.props?.avg_rating * 10) / 10} out of 5
                 </div>
+            </div>
+            <div className="reviews-global-ratings">
+                {this.props.review_count} global ratings
             </div>
             <div>
                 <div>
@@ -64,7 +67,7 @@ class Reviews extends React.Component {
                 </div>
                 {console.log(this.props)}
                 <Link to={`/products/${this.props?.id}/review/new`}>
-                    <button>Write a customer review</button>
+                    <button className="button5">Write a customer review</button>
                 </Link>
             </div>
         </div>

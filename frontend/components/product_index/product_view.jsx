@@ -42,12 +42,16 @@ const ProductView = (props) => (
             <div className="img">
                 <img src={`${props.product.photoUrl}`} alt="" />
             </div>
-            <h5>
+            <h5 className="product-title">
                 {props.product.name}  
             </h5>
-            <div className="product-rating">
-                {ratingStars(props.product.avg_rating)}
-                {props.product.review_count}
+            <div className="product-rating-container">
+                <span className="product-rating">
+                    {ratingStars(props.product.avg_rating)}
+                </span>
+                <span className="product-review-count">
+                    {props.product.review_count}
+                </span>
             </div>
             <div className="product-price">
                 <div className="product-price-sign">
@@ -60,13 +64,16 @@ const ProductView = (props) => (
                     {props.product.price.split(".")[1]}
                 </div>
             </div>
-            <div>
-               <div>
-                   Free Delivery
-                </div>
-                <div>
+            <div className="product-delivery">
+               <span>
+                   Get it as soon as
+                </span>
+                <span className="product-delivery-date">
                    {getDeliveryDate().toDateString().slice(0, 10)}
-                </div> 
+                </span> 
+            </div>
+            <div>
+                FREE Shipping on orders over $25
             </div>
         </Link>
     </li>

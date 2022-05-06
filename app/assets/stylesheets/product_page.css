@@ -32,11 +32,16 @@
     justify-content: center;
     height: 250px;
     width: 250px;
+    padding-bottom: 5px;
 }
 
 img {
     max-height: 250px;
     max-width: 250px;
+}
+
+.product-title {
+    font-weight: bolder;
 }
 
 .product-count {
@@ -48,11 +53,21 @@ img {
     font-family: AmazonEmber;
 }
 
+.product-rating-container {
+    padding-top: 5px;
+}
+
 .product-rating {
     filter: invert(88%) sepia(54%) saturate(1731%) hue-rotate(319deg) brightness(99%) contrast(91%);
 }
 
+.product-review-count {
+    color: #007185;
+    padding-left: 10px;
+}
+
 .product-price {
+    padding-top: 5px;
     display: flex;
     align-items: center;
 }
@@ -69,4 +84,14 @@ img {
 .product-price-sign {
     position: relative;
     top: -4px;
+}
+
+.product-delivery {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-delivery-date {
+    padding-left: 5px;
+    font-weight: bolder;
 }

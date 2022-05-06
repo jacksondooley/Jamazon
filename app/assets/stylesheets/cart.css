@@ -1,0 +1,20 @@
+
+
+.kettle-container {
+    position: relative;
+    left: 200px;
+    top: 100px;
+    height: 600px;
+}
+
+.kettle-img {
+    transform: scale(2);
+}
+
+.kettle-container > h1 {
+    position: relative;
+    left: 400px;
+    top: -200px;
+    font-size: 50px;
+    font-family: AmazonEmber;
+}
