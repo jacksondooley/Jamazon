@@ -7,7 +7,7 @@ const ratingStars = (rating) => {
 
     const starsArr = []
     for (let stars = 0; stars < 5; stars++) {
-        if (fullStars > 1) {
+        if (fullStars >= 1) {
             starsArr.push(<BsStarFill key={stars}/>)
             fullStars -= 1
         } else {

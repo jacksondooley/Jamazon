@@ -16,10 +16,10 @@ class Reviews extends React.Component {
     
         const starsArr = []
         for (let stars = 0; stars < 5; stars++) {
-            if (fullStars > 1) {
+            if (fullStars >= 1) {
                 starsArr.push(<BsStarFill key={stars}/>)
                 fullStars -= 1
-            } else if (fullStars == 0) {
+            } else if (fullStars === 0) {
                 starsArr.push(<BsStar key={stars}/>)
             } else { 
                 if (fullStars < 0.3) {
