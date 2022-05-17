@@ -685,6 +685,297 @@ furnitureProduct9 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/plate.jpg')
 furnitureProduct9.photo.attach(io: file, filename: 'plate.jpg')
 
+clothesProduct1 = Product.create(
+    {
+        name: "Kanu Surf Men's Riviera Swim Trunks",
+        description: "100% Polyester
+        Imported
+        Elastic closure
+        Machine Wash
+        Upf 50+ quick dry microfiber: lightweight and durable for your most comfortable pair of swim trunks for the beach, pool or just lounging around
+        Triple needle side seams and rises make Kanu Surf swimming trunks and bathing suits among the highest quality you will own",
+        category: 'clothes',
+        price: 12.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/trunks.jpg')
+clothesProduct1.photo.attach(io: file, filename: 'trunks.jpg')
+
+clothesProduct2 = Product.create(
+    {
+        name: "JIONS Slip-on Suede Chelsea Boots Men",
+        description: "100% Leather/Cowhide Grain Leather
+            Shoes Width: Medium, Heel Height:1in
+            crepe sole
+            Platform measures approximately .26in
+            COMFORT DEDIGN: The shoes are designed to be comfortable. Genuine leather upper, pigskin lining, soft raw rubber outsole, thickened soft elastic insole. Simple style solid beige classic fashion mens chelsea boots.",
+        category: 'clothes',
+        price: 64.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/boots.jpg')
+clothesProduct2.photo.attach(io: file, filename: 'boots.jpg')
+
+clothesProduct3 = Product.create(
+    {
+        name: "Dockers Men's Classic Fit Signature Khaki Lux Cotton Stretch Pants",
+        description: "98% Cotton, 2% Elastane
+            Imported
+            Button closure
+            Machine Wash
+            Best Pressed- Timeless details and sharp center crease for a polished and confident look
+            Classic Fit (D3) - Sits naturally at waist, eased through seat and thigh with a straight leg
+            Comfort Waistband offers up to 2in of extra room in the waist
+            Zip fly with button-through front closure, double welt button-through back pockets and fine topstitching",
+        category: 'clothes',
+        price: 22.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/pants.jpg')
+clothesProduct3.photo.attach(io: file, filename: 'pants.jpg')
+
+clothesProduct4 = Product.create(
+    {
+        name: "No Show Men Socks, Low Cut Ankle Sock, Men Short Socks Casual Cotton Socks",
+        description: "Cotton,Spandex
+            Hand Wash Only
+            Made of high quality cotton/spandex which enhances durability, comfortability and sweat-wicking,these no show socks are ideal for indoor and outdoor activity.
+            Cotton No Show Socks with 3 silicone heel grip technology ensures non-slip and your no show socks stay put all day long. M=size 6-10. L=size 11-13.
+            Invisible Wear: The liner socks creates an invisible wear inside shoes.Suit for boat shoes,sneakers, oxfords, loafers and sport shoes.
+            Well Made Cuff: The Ergonomically designed well made cuff make socks fit your feet perfectly, will not be tight and neither loose.",
+        category: 'clothes',
+        price: 16.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/socks.jpg')
+clothesProduct4.photo.attach(io: file, filename: 'socks.jpg')
+
+clothesProduct5 = Product.create(
+    {
+        name: "Carhartt Men's Logo Hooded Work Sweatshirt",
+        description: "50% Cotton, 50% Polyester
+            *10.5-ounce, 50% cotton/50% polyester blend, midweight
+            *attached hood
+            Machine wash cold - like colors
+            Loose Fit t-shirts are cut larger with a roomier fit in the chest and shoulders
+            Loose Fit, previously known as Original Fit, is a label update in name only. Loose and Original size and fit remains the same. Stock may vary in labeling
+            Previous Product Name: K87 Workwear Pocket Short-Sleeve T-shirt",
+        category: 'clothes',
+        price: 42.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/hoodie.jpg')
+clothesProduct5.photo.attach(io: file, filename: 'hoodie.jpg')
+
+clothesProduct6 = Product.create(
+    {
+        name: "Clarks Men's Tilden Walk Oxford",
+        description: "100% Leather
+            Imported
+            Synthetic sole
+            Heel measures approximately 1in
+            A shoe designed to take on the Monday through Friday grind
+            Stretch Gore Panels for a Flexible Fit
+            Ortholite footbed that softens impact and wicks away moisture",
+        category: 'clothes',
+        price: 120.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/oxford.jpg')
+clothesProduct6.photo.attach(io: file, filename: 'oxford.jpg')
+
+clothesProduct7 = Product.create(
+    {
+        name: "Leidowei Men's 2 in 1 Workout Running Shorts Lightweight Training Yoga Gym 7in Short with Zipper Pockets",
+        description: "Outer Shorts: 95% Polyester, 5% Spandex; Built-in Compression Shorts: 90% Polyester, 10% Spandex
+        Drawstring closure
+        Machine Wash
+        2-IN-1 DESIGN: Mesh material shorts, quick-dry fabric to keep you comfortable for workouts and practice, built-in Compression shorts with tight fit offers support thigh muscle to improve performance and provide a more generous fit for extra mobility.",
+        category: 'clothes',
+        price: 24.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/shorts.jpg')
+clothesProduct7.photo.attach(io: file, filename: 'shorts.jpg')
+
+clothesProduct8 = Product.create(
+    {
+        name: "Timberland Men's 35mm Classic Jean Belt",
+        description: "100% Leather
+        Imported
+        Buckle closure
+        Dry Clean Only
+        Mens leather belt made with 100% genuine leather with single loop antique finish buckle
+        Perfect mens casual belt that will soon become your favorite go to everyday leather belt
+        The perfect mens belt for jeans that can also convert into a mens dress belt and work belt",
+        category: 'clothes',
+        price: 19.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/belt.jpg')
+clothesProduct8.photo.attach(io: file, filename: 'belt.jpg')
+
+clothesProduct9 = Product.create(
+    {
+        name: "Disguise Men's Disney Pixar Toy Story and Beyond Buzz Lightyear Adult Costume Kit",
+        description: "Pull On closure
+        Officially Licensed product
+        Product Includes: Character hood, gloves and inflatable jet pack.
+        Whether it's Halloween, birthday parties, or even a fun filled night, disguise is good for everything!",
+        category: 'clothes',
+        price: 21.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/clothes/buzz.jpg')
+clothesProduct9.photo.attach(io: file, filename: 'buzz.jpg')
+
+officeProduct1 = Product.create(
+    {
+        name: "Jamazon Basics 6-Sheet Cross-Cut Paper and Credit Card Home Office Shredder",
+        description: "6 sheet crosscut paper/credit card shredder
+        Auto Start and overheat protection
+        Thermal Protection to prevent overheating
+        manual reverse to clear paper jams
+        shreds credit cards; small paper clips; staples
+        Important Note: Do not spray or keep any aerosol products in or around the shredder and do not shred items like metallic credit cards",
+        category: 'office',
+        price: 44.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/shredder.jpg')
+officeProduct1.photo.attach(io: file, filename: 'shredder.jpg')
+
+officeProduct2 = Product.create(
+    {
+        name: "E-Z Ink (TM) Remanufactured Ink Cartridge Replacement",
+        description: "Product Name: E-Z Ink remanufactured ink cartridges replacement for Epson 410XL 410 XL T410XL
+        Package Contents: 1 x User Guide, 1 x Cyan 410XL, 1 x Magenta 410XL, 1 x Yellow 410XL, total 3 cartridges
+        Page Yield: Color is 650 pages per cartridge (5% coverage)
+        Printer Compatibility: Epson Expression XP-830, XP-640, XP-530, XP-630, XP-635, XP-7100 Printer
+        Premium quality ink delivers crisp text and graphics",
+        category: 'office',
+        price: 23.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/ink.jpg')
+officeProduct2.photo.attach(io: file, filename: 'ink.jpg')
+
+officeProduct3 = Product.create(
+    {
+        name: "HP OfficeJet Pro 6978 All-in-One Wireless Printer",
+        description: "Main functions of this HP color inkjet photo printer: copy, scan, fax, wireless printing, two-sided duplex printing and scanning, color touchscreen, automatic document feeder, Instant Ink ready so you'll never run out of ink, and more
+            Easily print when and where you need to from your smartphone, tablet, or notebook PC; get convenient mobile printing options and mobile setup; connect the way you want to with Ethernet and wireless networking
+            Ink delivered to your home: get your first 2 months free when you enroll in HP Instant Ink (optional) during printer set up; plans starting at 2.99 dollar per month after the trial period, shipping and recycling included
+            Built for business; produce fast professional-quality color for 50% less than lasers, save paper, and handle more tasks without slowing down",
+        category: 'office',
+        price: 169.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/printer.jpg')
+officeProduct3.photo.attach(io: file, filename: 'printer.jpg')
+
+officeProduct4 = Product.create(
+    {
+        name: "Heavy Duty Packaging Tape, Clear, 2 Inches x 800 Inches",
+        description: "Scotch packaging tape unwinds smoothly and easily; resists splitting and tearing, adheres instantly and has a strong film backing
+            Extreme holding power for heavy tasks; adheres instantly, ideal for packaging overstuffed cartons - Scotch brand's strongest clear-to-the-core packaging tape
+            Meets US Postal Service regulations for standard packages, tape made in USA",
+        category: 'office',
+
+        price: 8.28,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/tape.jpg')
+officeProduct4.photo.attach(io: file, filename: 'tape.jpg')
+
+officeProduct5 = Product.create(
+    {
+        name: "Sharpie Permanent Markers, Fine Point, Black, 12 Count",
+        description: "Proudly permanent ink marks on paper, plastic, metal, and most other surfaces
+            Intensely brilliant Colors create eye popping, Vibrant impressions
+            Remarkably resilient ink dries quickly and resists fading and Water; AP certified
+            Endlessly versatile fine tip makes impressively Bold, Detailed marks
+            Includes 12 black Sharpie permanent markers",
+        category: 'office',
+        price: 8.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/marker.jpg')
+officeProduct5.photo.attach(io: file, filename: 'marker.jpg')
+
+officeProduct6 = Product.create(
+    {
+        name: "6Pcs Inkless Pencils Eternal",
+        description: "Package includes: You will receive 6 pieces of inkless pencils in different color and 6 extra pencil nibs, a eraser is placed in each everlasting pencil. Protable design can be used anytime, bring you relaxing writing experience.
+            0.7 mm Everlasting Pencil: This is a unlimited pencil without need to sharpen or replace refill and no ink, because the nib is made of alloy, the nib rubs on paper to decompose alloy metal molecules and leave them on the surface of the paper. Can be applied to notebook & writing pads, stone paper, kraft paper, and most paper, and the handwriting can be retained for a long time.
+            Erasable & Durable: Our eternal pencil can replace 100 wooden pencils. The nib made of alloy material, which can write smoothly and not easy to break, handwriting same as ordinary pencil, easy to erase, the barrel is non-slip, and the grip feels comfortable, suite adults and children.",
+        category: 'office',
+        price: 11.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/pen.jpg')
+officeProduct6.photo.attach(io: file, filename: 'pen.jpg')
+
+officeProduct7 = Product.create(
+    {
+        name: "Epson Home Cinema 2200 3LCD 1080p Projector",
+        description: "Epson Certified-Refurbished Product - Epson`s quality-assurance team reviews each refurbished product. They have been inspected and tested to ensure they perform properly.
+            Stunning picture quality — delivers an immersive viewing experience for TV shows, sporting events, gaming and movies for an amazing Full HD picture
+            Smooth, crisp images — with Image Enhancement and Frame Interpolation
+            Built-in Android TV (2) — latest Android TV interface with a simple-to-use remote - including voice search with built-in Google Assistant. Watch all your favorite streaming channels including Hulu, HBO, YouTube and more (3) without an external streaming media player",
+        category: 'office',
+        price: 649.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/projector.jpg')
+officeProduct7.photo.attach(io: file, filename: 'projector.jpg')
+
+officeProduct8 = Product.create(
+    {
+        name: "Pendaflex File Folders",
+        description: "TRIED AND TRUE: Pendaflex Standard Manila File Folders slip seamlessly into many existing filing systems and are easy to label, easy to read and easy to replace
+            1/3-CUT TABS IN ASSORTED POSITIONS are staggered from left to right for perfect visibility in your vertical or lateral file cabinet",
+        category: 'office',
+        price: 13.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/folder.jpg')
+officeProduct8.photo.attach(io: file, filename: 'folder.jpg')
+
+officeProduct9 = Product.create(
+    {
+        name: "Half Sheet Self Adhesive Shipping Labels for Laser & Inkjet Printers",
+        description: "【COMPATIBILITY】- LabelMore sticker paper for inkjet & laser printer, compatible with all laser & inkjet printer series on the market, printing smoothly without paper jam issue.
+                    【ADHESIVE LABELS】- Each mailing labels paper have strong permanent self-adhesive for all surface types. LabelMore shipping label stickers adheres to bubble mailer, cardboard shipping box, poly mailer, kraft envelopes and more surface. Save mailing costs and improve your work efficiency since NO tape.",
+        category: 'office',
+        price: 28.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/office/label.jpg')
+officeProduct9.photo.attach(io: file, filename: 'label.jpg')
+
+
+
+
+
 1000.times do
     Review.create(
         title: Faker::GreekPhilosophers.quote,
