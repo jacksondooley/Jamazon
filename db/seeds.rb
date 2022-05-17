@@ -972,6 +972,258 @@ officeProduct9 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/office/label.jpg')
 officeProduct9.photo.attach(io: file, filename: 'label.jpg')
 
+toysandgamesProduct1 = Product.create(
+    {
+        name: "Circuit Maze Electric Current Brain Game and STEM Toy for Boys and Girls Age 8 and Up",
+        description: "Trusted By Families Worldwide - With Over 50 Million Sold, Thinkfun Is The World'S Leading Manufacturer Of Brain Games And Mind Challenging Puzzles
+        Develops Critical Skills - Gameplay Provides A Stealth Learning Experience, Where Players Develop Logical Reasoning And Planning Skills As They Play And Gain An Understanding Of How Circuits And Electrical Currents Work
+        What You Get - Circuit Maze Is One Of The Best Gifts You Can Find For Boys And Girls Ages 8 And Up It Uses Real Circuits And Pieces To Create A Fun Gameplay And Stealth Learning Experience Comes With 60 Challenges Of Increasing Difficulty From Beginner To Expert, Requires 3 Aaa Batteries, Not Included",
+        category: 'toysandgames',
+        price: 38.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/circuit.jpg')
+toysandgamesProduct1.photo.attach(io: file, filename: 'circuit.jpg')
+
+toysandgamesProduct2 = Product.create(
+    {
+        name: "UNO Family Card Game, with 112 Cards in a Sturdy Storage Tin",
+        description: "UNO is the classic family card game that's easy to learn and so much fun to play!
+                In a race to deplete your hand, match one of your cards with the current card shown on top of the deck by either color or number.
+                Strategize to defeat your competition with special action cards like Skips, Reverses, Draw Twos and color-changing Wild cards.
+                When you're down to one card, don't forget to shout UNO!
+                This fun family card game is perfect for adults, teens and kids 7 years old and up.",
+        category: 'toysandgames',
+        price: 9.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/uno.jpg')
+toysandgamesProduct2.photo.attach(io: file, filename: 'uno.jpg')
+
+toysandgamesProduct3 = Product.create(
+    {
+        name: "SRB1200 Full Auto Rechargeable Battery Powered Water Bead Gel Ball Blaster",
+        description: "Full Auto Action: 11 rounds per second fully auto fire rate. Rechargeable battery sends ammo 210 fps downrange
+            1,200 rounds, zero re-loads: 1,200 water gel ball drum magazine capacity. Load your mag, shoot 1,200 rounds!
+            Complete Kit: Includes the water bead gel blaster, 1,200 round water ball drum magazine, 6,000 water ball Splat R Ball ammunition, safety glasses, Splat R ball collapsible easy loading funnel, Rechargeable 7.4V 1800mAh battery with charging cable and SplatRBall water ball activated target!
+            Water Gel Blaster: The water ball bead ammo hydrates in 4 hours and fragment on impact. They are non-toxic, non-staining and can be rehydrated. Easy clean up!",
+        category: 'toysandgames',
+        price: 116.78,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/blaster.jpg')
+toysandgamesProduct3.photo.attach(io: file, filename: 'blaster.jpg')
+
+toysandgamesProduct4 = Product.create(
+    {
+        name: "Colorations Kids Decorate Your Own Spin Drum Craft Kit",
+        description: "PROMOTE CREATIVE SKILL: Start building your imagination and create your own style Spin Drum. Great as educational toys for your kids. Using hand-eye coordination, unleash your creativity and imagination, improve problem solving skills and concentration, promote story telling and enhance self expression
+            OPEN ENDED FUN: Open ended craft kits offer fun filled craft projects for children to create, learn, pretend and explore
+            MUSIC EDUCATION: These hand-held drums are a fun and easyway to develop a young student's sense of rhythm. Also helps to promote hand and eye coordination
+            READY TO PAINT: No preparation required. Ready to decorate with paint, collage, glitter glue and much more. Each drum measures 8-3/4 inches L x 3 1/2 inches D",
+        category: 'toysandgames',
+        price: 33.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/drum.jpg')
+toysandgamesProduct4.photo.attach(io: file, filename: 'drum.jpg')
+
+toysandgamesProduct5 = Product.create(
+    {
+        name: "Bubble Machine Durable Automatic Bubble Blower",
+        description: "【High Output 5000+ Colorful Bubbles】2022 Upgraded Zerhunt Bubble Machine Can Generate More Than 5000+ Bubbles Per Minute With 6 Spinning Wands,2 Speed Level & Super Built-In Motor. It Can Blow Tons of Colorful Bubbles Faster, Higher And Further Even Inside With No Wind.
+            【Top Quality Materials & Safe Design】Made From Durable & High Quality ABS Material With Superior Toughness And Rust Protection, This Bubble Maker With Official CPC Toy Safety Certification Won't Be Harmful To Kid, Toddlers ,Pets And Adults. Upgraded And Special Safe Design: Once Touch The Spinning Wands, And The Bubble Machine Will Once Stop Working.",
+        category: 'toysandgames',
+        price: 36.95,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/bubble.jpg')
+toysandgamesProduct5.photo.attach(io: file, filename: 'bubble.jpg')
+
+toysandgamesProduct6 = Product.create(
+    {
+        name: "LEGO City Space Deep Space Rocket and Launch Control 60228 Model Rocket Building Kit with Toy Monorail",
+        description: "Build a large multi-stage rocket and opening launch control tower with interactive play experience, plus a monorail system to transport astronauts from the tower to the training grounds and rocket!
+            Includes 6 LEGO City minifigures: 2 astronauts, 2 scientists, Launch Director, ground crew technician and a robot figure, plus a space telescope, rover with articulated arm and a launchpad",
+        category: 'toysandgames',
+        price: 157.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/space.jpg')
+toysandgamesProduct6.photo.attach(io: file, filename: 'space.jpg')
+
+toysandgamesProduct7 = Product.create(
+    {
+        name: "TeeTurtle | The Original Reversible Octopus Plushie",
+        description: "This award-winning, #1 best-selling plushie has taken TikTok by storm! Your favorite creators have it, and now you can too!
+        This sensory fidget toy is perfect for stress relief, and lets you show your mood without saying a word! Get this award-winning Octopus Plushie to show your friend and family how you're really feeling.
+        Over 24,000 5 star reviews! Kids and adults alike will love the supersoft fabric and portable size of the plushies. Not to mention, they flip INSIDE OUT, thanks to TeeTurtle`s patented Reversible Plushie design.",
+        category: 'toysandgames',
+        price: 10.49,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/octopus.jpg')
+toysandgamesProduct7.photo.attach(io: file, filename: 'octopus.jpg')
+
+toysandgamesProduct8 = Product.create(
+    {
+        name: "Play-Doh Modeling Compound 10-Pack Case of Colors",
+        description: "10 cans of creative fun - kids can get creative with just the right colors They need in this Play-Doh 10-pack of 2-ounce cans!
+        Just the right colors to start - shape, squish, mix, and make it all. Great for lots of uses like Play-Doh refills, as a Play-Doh Starter set, or as an add-on to any Play-Doh toy (sold separately).
+        Shape your imagination - squishy, bright, non-toxic Play-Doh compound sparks imaginations For kids 2 and up who love arts and crafts like Modeling clay.",
+        category: 'toysandgames',
+        price: 7.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/dough.jpg')
+toysandgamesProduct8.photo.attach(io: file, filename: 'dough.jpg')
+
+toysandgamesProduct9 = Product.create(
+    {
+        name: "Little Tikes First Slide Toddler Slide",
+        description: "PERFECT BEGINNER'S SLIDE: This cute and bright playing set is perfect for Beginner slide, sized is 3 feet long ans safe especially for younger kids Age- 18 months - 6 years
+            EASY TO KEEP AND TO SET UP: You can easily assemble it in a short time according to our instruction; This is also a space lover just folds down without tools for compact storage and moving",
+        category: 'toysandgames',
+        price: 28.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/toysandgames/slide.jpg')
+toysandgamesProduct9.photo.attach(io: file, filename: 'slide.jpg')
+
+petsuppliesProduct1 = Product.create(
+    {
+        name: "Milk-Bone MaroSnacks Dog Treats for Dogs of 40 Ounces",
+        description: "Contains one (1) 40 ounce package of small dog treats with real bone marrow (packaging may vary)
+                The dog biscuit shell encases a real bone marrow center, delicious treats that you can feel good about giving
+                Crunchy on the outside and meaty on the inside, our MaroSnacks dog snacks are a satisfying combo of texture and mouthwatering flavor",
+        category: 'petsupplies',
+        price: 10.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/dogtrest.jpg')
+petsuppliesProduct1.photo.attach(io: file, filename: 'dogtrest.jpg')
+
+petsuppliesProduct2 = Product.create(
+    {
+        name: "goDog Checkers Skinny Rooster With Chew Guard Technology Tough Plush Dog Toy",
+        description: "SOFT & DURABLE: goDog's Checkers are cute and cuddly squeaky toys made with soft, checkered-textured plush that dogs love to play and cuddle with; featuring reinforced seams and chew-resistant lining for fun, long-lasting solo and interactive play
+            BUILT-IN SQUEAKER: The dog toy is designed with a built-in squeaker to entice and excite your pup, satisfying their hunting instincts and chewing behavior to keep their interest during play
+            ENRICHMENT: The immediate auditory feedback of the Checkers plush toys excite dogs and encourages play; they are designed to provide enrichment and stimulation, catering to your dog's natural and instinctual behavior to keep them busy and entertained",
+        category: 'petsupplies',
+        price: 10.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/chicken.jpg')
+petsuppliesProduct2.photo.attach(io: file, filename: 'chicken.jpg')
+
+petsuppliesProduct3 = Product.create(
+    {
+        name: "Aqueon LED MiniBow™ Kit with SmartClean™ Technology White 2.5 Gallon",
+        description: "Equipped with SmartClean(TM) Technology to perform water changes in less than 2 minute
+            Improve water quality for a happy, healthy fish
+            Includes aquarium vessel, hood and elevated base, power filter, small filter cartridge, fish food, water conditioner and setup guide
+            Great home for small fish",
+        category: 'petsupplies',
+        price: 46.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/fishbowl.jpg')
+petsuppliesProduct3.photo.attach(io: file, filename: 'fishbowl.jpg')
+
+petsuppliesProduct4 = Product.create(
+    {
+        name: "Niteangel Natural Coconut Hideaway with Ladder, Bird and Small Animal Toy",
+        description: "Toys are handmade and created from natural, eco-friendly materials. Toy connects easily to cage with quick-link attachments.
+            Offers larger birds a rugged, rich, textured landscape to engage in hours of physical play.
+            Made with Hevea wood branches, coconut shell and cotton rope, encouraging foot and beak exercise.
+            Ideal for small to medium sized birds such as budgies, lovebird, also suitable for hamsters rats or gecko
+            Dimension: 12-inch long and 4-1/2-inch wide",
+        category: 'petsupplies',
+        price: 12.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/bird.jpg')
+petsuppliesProduct4.photo.attach(io: file, filename: 'bird.jpg')
+
+petsuppliesProduct5 = Product.create(
+    {
+        name: "MeoHui Cat Toys for Indoor Cats",
+        description: "1. EXCITING ENTERTAINMENT FOR CATS: Cats are crazy about chaser games! Combine string and feather into a great cat toy, this cat feather toy is an irresistible lure for cats! Swing this feathers `lure` will get your cats excited and bring out the  `hunt instinct`, making them running and jumping like a wild animal, driving your cats crazy with joy! Even adult cat play like a kitten again!
+            2. CLASSIC PRACTICAL INTERACTIVE CAT TOY: This interactive cat toy wand will help your Indoor cats to flip, jump, pounce, chase. Great way to get your cats energy out and do more exercise, making your cat be released and happy! Suitable for kittens and cats of all ages and sizes! A great toy to spend some quality time with your feline friend! Enjoy the happiness time with our toy! This is a CLASSIC cat toys for indoor cats, give your fur baby a try!",
+        category: 'petsupplies',
+        price: 22.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/cattoy.jpg')
+petsuppliesProduct5.photo.attach(io: file, filename: 'cattoy.jpg')
+
+petsuppliesProduct6 = Product.create(
+    {
+        name: "Bearded Dragon Lizard Leash Harness",
+        description: "【Dinosaur Style Leash】This is the latest lizard dinosaur wing leash, makes your beardie charming and unique in the crowd, enjoy a good time outside.
+        【Durable MATERIAL】Bearded Dragon Leash is made of soft leather harness and durable nylon rope. The super soft leather will not hurt lizard while crawling and easy to put on and take off.",
+        category: 'petsupplies',
+        price: 9.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/lizard.jpg')
+petsuppliesProduct6.photo.attach(io: file, filename: 'lizard.jpg')
+
+petsuppliesProduct7 = Product.create(
+    {
+        name: "Niteangel Wooden Ladder Bridge, Hamster Mouse Rat Rodents",
+        description: "Cute bridge is made from natural wood sticks held together with two flexible metal wires.
+            Easily bends to fit a variety of shapes and sizes to reach elevated areas; encourages exploration and exercise.
+            Can also be curled into a domed shelter your furry friend will use as a warm, cozy nest.",
+        category: 'petsupplies',
+        price: 7.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/mouse.jpg')
+petsuppliesProduct7.photo.attach(io: file, filename: 'mouse.jpg')
+
+petsuppliesProduct8 = Product.create(
+    {
+        name: "Niteangel Super-Silent Hamster Exercise Wheels",
+        description: "Super Silent 8.2-Inch Hamster Wheel - Niteangel Silent Spinner Hamster wheel designed with Dual Ball bearings, it brings your little hamster endless running happiness, also brings you a quiet night even if your hamster on the race track to run & hamster wheel is spinning
+            Must-have hamster cage accessories - Your furry critter will love this hamster wheel Toy as Hamsters love the hamster rolling wheel like a runner to help them to broken boredom & enrich their nighttime, also keep them to exercise for maintaining their strength and well-being",
+        category: 'petsupplies',
+        price: 28.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/wheel.jpg')
+petsuppliesProduct8.photo.attach(io: file, filename: 'wheel.jpg')
+
+petsuppliesProduct9 = Product.create(
+    {
+        name: "Penn-Plax Spongebob Squarepants Officially Licensed Aquarium Ornament",
+        description: "OFFICIALLY LICENSED: This aquarium ornament is great for anyone who loves the hit Nickelodeon show, SpongeBob! Enjoy the magical world of Bikini Bottom within your fish tank.
+        MADE OF SAFE AND DURABLE RESIN: Our aquarium ornaments are inspected with your fish`s safety in mind. The material used is safe for both freshwater and saltwater aquariums. Each decoration has a sturdy base. There`  s no need to worry about it floating around once you place it underwater.",
+        category: 'petsupplies',
+        price: 11.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/pets/pineapple.jpg')
+petsuppliesProduct9.photo.attach(io: file, filename: 'pineapple.jpg')
+
 
 
 
@@ -981,7 +1233,7 @@ officeProduct9.photo.attach(io: file, filename: 'label.jpg')
         title: Faker::GreekPhilosophers.quote,
         body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 4),
         rating: rand(2..5).to_i,
-        product_id: rand(0..34).to_i,
+        product_id: rand(0..79).to_i,
         user_id: rand(1..5).to_i,
     )
 end
