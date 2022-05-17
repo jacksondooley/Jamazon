@@ -17,7 +17,7 @@ const NavMain = () => (
                 <Link to="/electronics">Electronics</Link>
             </div>
             <div className="nav-main-item">
-                <Link to="/furniture">Furniture</Link>
+                <Link to="/home">Home</Link>
             </div>
             <div className="nav-main-item">
                 <Link to="/clothes">Clothes</Link>

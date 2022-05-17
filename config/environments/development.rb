@@ -28,6 +28,8 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
+  config.active_job.queue_adapter = :inline 
+
   config.active_storage.service = :amazon_dev
 
   # Don't care if the mailer can't send.

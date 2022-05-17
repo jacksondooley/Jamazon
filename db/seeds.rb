@@ -547,6 +547,144 @@ jamsProduct6 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/jams/mango.jpg')
 jamsProduct6.photo.attach(io: file, filename: 'mango.jpg')
 
+furnitureProduct1 = Product.create(
+    {
+        name: "Rivet Revolve Modern Upholstered Sofa",
+        description: "This modern sectional sofa features simple lines and square armrests atop tall tapered legs, giving it a minimalist feel that looks great with most decor styles.
+        Hardwood frame, solid beech wood legs and durable polyester upholstery stand up to wear and tear
+        The chaise can be moved to either end to accommodate your room layout -- and it provides an extra seat for company.
+        Assemble in 15 minutes or less, just attach the legs that come zippered inside the product
+        Wipe clean with a soft, dry cloth.",
+        category: 'home',
+        price: 856.00,
+        rating: 4.5
+    }
+)
+
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/sectional.jpg')
+furnitureProduct1.photo.attach(io: file, filename: 'sectional.jpg')
+
+furnitureProduct2 = Product.create(
+    {
+        name: "HomePop Swoop Arm Living-Room-Chair",
+        description: "ACCENT CHAIR: Our elegant accent chair features a slightly curved back along with side swoop arms to create a comfortable chair that would go perfect with your living room furniture or even bedroom furniture
+        MODERN CHAIR: Our accent chairs for living room, bedroom, and home office are made with a premium easy-to-care-for fabric that is both stylish and durable for a lavish design that’s built to last
+        ROOM FURNITURE: When paired together our accent chairs set of 2 provide extra seating for either your living room, bedroom, or home office | Our floral accent chairs with arms and solid wood legs that support up to 250lbs
+        SITTING CHAIR: Our small accent chair with it's transitional design works in most homes adding a decorative accent to any room for a luxurious statement
+        MODERN ACCENT CHAIR: Available in 3 various fabric styles our accent chair with arms is super easy to clean with either a vacuum or by spot wipe using a soft dry cloth.",
+        category: 'home',
+        price: 199.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/arm_chair.jpg')
+furnitureProduct2.photo.attach(io: file, filename: 'arm_chair.jpg')
+
+furnitureProduct3 = Product.create(
+    {
+        name: "De'Longhi EC9665M La Specialista Maestro Espresso Machine",
+        description: "Sensor Grinding Technology Choose one of 8 grinding settings for the coffee beans of your choice and adjust the dose with a precise digital dosing guide.
+        Smart Tamping Station No more too loose or too dense doses, the Smart Tamping Station works in harmony with the sensors to ensure perfect pressure and proper doses with less mess.
+        Dynamic Pre-Infusion The dynamic pre-infusion process adapts to the density of the coffee dose, and evenly wets the grounds to reach their perfect extraction.",
+        category: 'home',
+        price: 1299.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/espresso.jpg')
+furnitureProduct3.photo.attach(io: file, filename: 'espresso.jpg')
+
+furnitureProduct4 = Product.create(
+    {
+        name: "Alora Modern Vintage Bohemian Distressed Accent Rug",
+        description: "100% Polypropylene
+            A flat, kilim-style pile that has the look of a Flat weave rug
+            The Yarn is stain resistant and doesn't shed or fade over time, making it perfect for high traffic areas
+            Extremely durable, design for high traffic area
+            The 100% jute backing is safe for wood floors
+            Stain resistant and won't fade in the sunlight over time",
+        category: 'home',
+        price: 19.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/rug.jpg')
+furnitureProduct4.photo.attach(io: file, filename: 'rug.jpg')
+
+furnitureProduct5 = Product.create(
+    {
+        name: "Accent Plus Floral Fantasia Art Glass Vase",
+        description: "Glass
+        Imported
+        This vase weighs 11.5 lbs and measures 8x8x9
+        Made of glass to create a stunning home décor accent
+        Accentuate your home's side tables, bookshelves, mantles, or dressers with this exquisite decorative vase! Fill with flowers or leave as a stand alone décor piece to elevate your interior design.
+        To clean your work of art dust lightly or wipe with damp cloth as needed.
+        This individually hand crafted jug-shaped vase is a treasure of glowing color and graceful garden imagery. Individually hand-crafted for its unique beauty and therefore may be slightly different from the picture shown here.",
+        category: 'home',
+        price: 84.15,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/vase.jpg')
+furnitureProduct5.photo.attach(io: file, filename: 'vase.jpg')
+
+furnitureProduct6 = Product.create(
+    {
+        name: "Bathroom Accessory Set-4 Pieces Resin",
+        description: "4 Piece Bathroom Accessories Complete Set: 1 Refillable Lotion/Soap Dispenser, 1 Rinsing Tumbler Cup ,1 Soap Dish and 1 Vanity Tray; A REAL COMPLETE COUNTERTOP VANITY ACCESSORIES SET FOR BATHROOM;
+        Multifunctional Accessories: can be used to organize the sink, make your bathroom countertop tidy and orderly, suitable as an ideal bathroom accessory for home decoration
+        Convenient and Safety Package Box :modern bathroom accessories are made of high-quality resin, which is more durable and stronger than ceramic or plastic sanitary ware. safety corrugated box and foam package provide safety package box to avoid broken after you received it",
+        category: 'home',
+        price: 37.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/bathroom.jpg')
+furnitureProduct6.photo.attach(io: file, filename: 'bathroom.jpg')
+
+furnitureProduct7 = Product.create(
+    {
+        name: "TERESA'S COLLECTIONS Rabbit on Turtle Garden Outdoor Statue and Sculpture with Solar Lights",
+        description: "【Original Design 】TERESA'S COLLECTIONS is a retail brand adhering to original designs. Inspired by gray rabbit and tortoise reading a book, this rabbit garden statue brings natural faux succulents atmosphere to your garden
+        【Premium Quality】 This rabbit figurine made of durable resin materials, waterproof and anti-fading. The product is equipped with advanced solar chips, which can light up for 8 hours",
+        category: 'home',
+        price: 36.99,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/turtle.jpg')
+furnitureProduct7.photo.attach(io: file, filename: 'turtle.jpg')
+
+furnitureProduct8 = Product.create(
+    {
+        name: "Burpee Giant Flowered Mixed Colors Zinnia Seeds 150 seeds",
+        description: "Huge, 5in doubles, on sturdy, bushy plants add bold, vibrant color to gardens. The more you cut, the more they bloom! heat-loving and very easy to grow
+        Each packet contains 150 seeds
+        Sow outdoors 4 weeks after the average last frost date
+        Plant Height is 26in. plant spread is 12in. blooms are 5in",
+        category: 'home',
+        price: 6.85,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/flower.jpg')
+furnitureProduct8.photo.attach(io: file, filename: 'flower.jpg')
+
+furnitureProduct9 = Product.create(
+    {
+        name: "12 PACK 9 Inch Lightweight Wheat Straw Plates",
+        description: "【Qualified Material】 Made of wheat straw fiber, starch and food-grade PP material, totally safety and healthy. A good alternative to ceramic, glass other plastic plates.
+        【User-Friendly Design】 Designed with space-saving style and smooth round edges, light to hold and safe to use. No need to worry about break the plate again. They are perfect plate for naughty kids and careless people.
+        【Microwave and Dishwasher Safe】 Temperature resistance reaches up to 248 °F(-4°F ~ 248 °F). Don`t Microwave on high for more than 3 minutes. Easy to clean.",
+        category: 'home',
+        price: 19.85,
+        rating: 4.5
+    }
+)
+file = open('https://jamazon-seeds.s3.amazonaws.com/furniture/plate.jpg')
+furnitureProduct9.photo.attach(io: file, filename: 'plate.jpg')
+
 1000.times do
     Review.create(
         title: Faker::GreekPhilosophers.quote,
