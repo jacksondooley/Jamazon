@@ -28,12 +28,19 @@ const ratingStars = (rating) => {
     return starsArr
 }
 
-const getDeliveryDate = () => {
-    const deliveryDate = new Date()
-    deliveryDate.setDate(deliveryDate.getDate() + 6)
-    return deliveryDate
-}
+    const getDeliveryDate = () => {
+        const deliveryDate = new Date()
+        deliveryDate.setDate(deliveryDate.getDate() + 6)
+        return deliveryDate
+    }
 
+    const getName = (name) => {
+        if (name.length > 64) {
+            return name.slice(0, 64) + "..."
+        } else {
+            return name
+        }
+    }
 
 
 const ProductView = (props) => (
@@ -43,7 +50,7 @@ const ProductView = (props) => (
                 <img src={`${props.product.photoUrl}`} alt="" />
             </div>
             <h5 className="product-title">
-                {props.product.name}  
+                { getName(props.product.name) }  
             </h5>
             <div className="product-rating-container">
                 <span className="product-rating">
