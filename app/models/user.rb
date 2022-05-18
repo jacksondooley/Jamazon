@@ -7,9 +7,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :carts
 
-  # has_many :cart_items, through :carts, source: :product
-
-
+  has_many :cart_items, through: :carts, source: :product
 
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true

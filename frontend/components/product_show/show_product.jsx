@@ -7,6 +7,11 @@ import ReviewsContainer from "./reviews_container";
 class ShowProduct extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            qty: 1
+        }
+
+        this.handleAdd = this.handleAdd.bind(this)
     }
 
     componentDidMount() {
@@ -62,6 +67,12 @@ class ShowProduct extends React.Component {
         const deliveryDate = new Date()
         deliveryDate.setDate(deliveryDate.getDate() + 60)
         return deliveryDate.toDateString().slice(0, 10)
+    }
+
+    handleAdd = (e) => {
+        e.preventDefault()
+        console.log(this.state.qty)
+        this.setState({ qty: 1})
     }
 
 
@@ -126,28 +137,28 @@ class ShowProduct extends React.Component {
                                 In Stock.
                             </div>
                             <div className="show-form">
-                                <form action="">
-
+                                <form action="" onSubmit={this.handleAdd}>
+                                    <label htmlFor="">
+                                        Qty
+                                        <select name="qty" id="qty" onChange={((e) =>this.setState({ qty: e.target.value}))} value={this.state.qty}>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </label>
+                                    <div className="show-button-container">
+                                        <input type="submit" className="button4" value="Add to Cart"/>
+                                        
+                                    </div>
                                 </form>
-                                <label htmlFor="">
-                                    Qty
-                                    <select name="qty" id="qty">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                </label>
-                                <div className="show-button-container">
-                                    <button className="button3">Buy Now</button>
-                                </div>
-                                <div className="show-button-container">
-                                    <button className="button4">Add to Cart</button>
-                                </div>
+                            </div>
+                            <div className="show-button-container">
+                                <button className="button3" >Buy Now</button>
                             </div>
                             <div className="secure-transaction">
                                 <div className="secure-transaction-icon">

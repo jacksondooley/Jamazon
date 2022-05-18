@@ -13,4 +13,10 @@ class Product < ApplicationRecord
     def review_count
         reviews.count(:rating)
     end
+
+    def qty(user_id)
+        item = @carts.find_by(user_id: user_id, product_id: self.id)
+        item.quantity
+    end
+
 end

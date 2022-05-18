@@ -3,11 +3,12 @@ require 'open-uri'
 Product.destroy_all
 User.destroy_all 
 Review.destroy_all
+Cart.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!("products")
 ActiveRecord::Base.connection.reset_pk_sequence!("users")
 ActiveRecord::Base.connection.reset_pk_sequence!("reviews")
-
+ActiveRecord::Base.connection.reset_pk_sequence!("carts")
 
 demouser = User.create(
     name: 'Demo User',
@@ -15,31 +16,31 @@ demouser = User.create(
     password: 'password'
 )
 
-user1 = User.create(
+user = User.create(
     name: 'Jackson Dooley',
     email: 'jacksondooley@hotmail.com',
     password: 'password'
 )
 
-user1 = User.create(
+user = User.create(
     name: 'Gilfoyle Li',
     email: 'gilfoyle@hotmail.com',
     password: 'password'
 )
 
-user1 = User.create(
+user = User.create(
     name: 'Jim Nardi',
     email: 'jim@hotmail.com',
     password: 'password'
 )
 
-user1 = User.create(
+user = User.create(
     name: 'Kyle Ginzburg',
     email: 'kyle@hotmail.com',
     password: 'password'
 )
 
-user1 = User.create(
+user = User.create(
     name: 'Amin Babar',
     email: 'amin@hotmail.com',
     password: 'password'
@@ -70,6 +71,8 @@ bookProduct1 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg')
 bookProduct1.photo.attach(io: file, filename: 'hailMary.jpg')
 
+democart = Cart.create(user_id: demouser.id, product_id: 1)
+
 bookProduct2 = Product.create(
     {name: 'Thus Spoke Zarathustra',
     description: "Written by: Friedrich Nietzsche
@@ -83,6 +86,8 @@ bookProduct2 = Product.create(
 
 file = open('https://jamazon-seeds.s3.amazonaws.com/books/thus_spoke_zarathustra.jpg')
 bookProduct2.photo.attach(io: file, filename: 'thus_spoke_zarathustra.jpg')
+
+democart = Cart.create(user_id: demouser.id, product_id: 2)
 
 bookProduct3 = Product.create(
     {name: 'Zero to One: Notes on Startups, or How to Build the Future',

@@ -1,4 +1,5 @@
 import * as APIUtil from "./../util/session_api_util" 
+import { receiveCart } from "./cart_actions"
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER"
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER"
@@ -21,7 +22,10 @@ const receiveErrors = (errors) => {
 
 export const login = (user) => dispatch => (
     APIUtil.login(user)
-        .then( (user) => dispatch(receiveCurrentUser(user)))
+        .then( (res) => {
+            dispatch(receiveCurrentUser(res))
+            dispatch(receiveCart(res.cart))
+        })
         .fail( (errors) => dispatch(receiveErrors(errors.responseJSON)))
 )
 
