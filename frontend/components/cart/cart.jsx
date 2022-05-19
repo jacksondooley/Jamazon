@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 class Cart extends React.Component {
   constructor(props) {
@@ -30,14 +31,14 @@ class Cart extends React.Component {
             {this.props.items.map((item) => (
                 <li>
                   <div>
-                    <a href="">
+                  <Link to={`/products/${item.id}`}>
                       <img src={item.photoUrl}/>
-                    </a>
+                    </Link>
                   </div>
                   <div>
-                    <a href="">
-                      {item.name}
-                    </a>
+                  <Link to={`/products/${item.id}`}>
+                    {item.name}
+                  </Link>
                   </div>
                   <div>
                     {item.price}
