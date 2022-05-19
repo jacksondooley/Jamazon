@@ -25,11 +25,13 @@ class Cart extends React.Component {
             </div>
           </div>
         :
-        <div>
-          <h1>Shopping Cart</h1>
-          <ul>
+        <div className="cart-page">
+          <div className="cart-page-top">
+            <h1>Shopping Cart</h1>
+          </div>
+          <ul className="cart-item-container">
             {this.props.items.map((item) => (
-                <li>
+                <li className="cart-item">
                   <div>
                   <Link to={`/products/${item.id}`}>
                       <img src={item.photoUrl}/>

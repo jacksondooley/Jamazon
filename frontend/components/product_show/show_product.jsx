@@ -71,7 +71,8 @@ class ShowProduct extends React.Component {
 
     handleAdd = (e) => {
         e.preventDefault()
-        console.log(this.state.qty)
+        this.props.addItem(this.props.userId ,this.props.match.params.id, this.state.qty)
+        console.log(this.props.userId)
         this.setState({ qty: 1})
     }
 

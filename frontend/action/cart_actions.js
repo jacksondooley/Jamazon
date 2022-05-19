@@ -34,3 +34,14 @@ export const fetchCart = (userId) => dispatch => (
   cartApiUtil.fetchCart(userId)
     .then( (res) => dispatch(receiveCart(res)))
 )
+
+export const addItem = (userId, productId, quantity) => dispatch => {
+  console.log(`userId: ${userId}`)
+  
+  return (
+
+    cartApiUtil.addItem(userId, productId, quantity)
+      .then( (res) => dispatch(receiveCart(res)))
+  )  
+}
+

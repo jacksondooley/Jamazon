@@ -18,3 +18,26 @@
     font-size: 50px;
     font-family: AmazonEmber;
 }
+
+.cart-page {
+    font-family: AmazonEmber;
+    background-color: rgb(225, 225, 225);
+}
+
+.cart-page-top {
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.cart-page-top > h1 {
+    font-size: 50px;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+}
