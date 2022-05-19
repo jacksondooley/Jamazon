@@ -35,13 +35,13 @@ export const fetchCart = (userId) => dispatch => (
     .then( (res) => dispatch(receiveCart(res)))
 )
 
-export const addItem = (userId, productId, quantity) => dispatch => {
-  console.log(`userId: ${userId}`)
-  
-  return (
-
+export const addItem = (userId, productId, quantity) => dispatch => (
     cartApiUtil.addItem(userId, productId, quantity)
       .then( (res) => dispatch(receiveCart(res)))
-  )  
-}
+)
+
+export const removeItem = (userId, productId) => dispatch => (
+  cartApiUtil.removeItem(userId, productId)
+    .then( (res) => dispatch(receiveCart(res)))
+)
 

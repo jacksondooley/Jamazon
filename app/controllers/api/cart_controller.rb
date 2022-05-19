@@ -28,7 +28,9 @@ class Api::CartController < ApplicationController
   end
 
   def destroy
-
+    @cart = Cart.find_by(user_id: params[:id], product_id: params[:productId])
+    @cart.destroy
+    render :show
   end
 
 end

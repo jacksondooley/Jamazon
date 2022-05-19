@@ -13,9 +13,10 @@ class ShoppingCart extends React.Component {
 
   cartLength = (cart) => {
     let cartSum = 0
-    // cart.forEach((item) => {
-    //   cartSum += item.
-    // })
+    cart.forEach((item) => {
+      cartSum += item.quantity
+    })
+    return cartSum
   }
 
   render() {
@@ -24,7 +25,7 @@ class ShoppingCart extends React.Component {
         {/* <IconContext.Provider value={{ size: "40px" }}>
           <FaShoppingCart/>
         </IconContext.Provider> */}
-        <div className="shopping-cart-num">{this.props.cart.length ? this.props.cart.length : 0}</div>
+        <div className="shopping-cart-num">{this.props.cart.length ? this.cartLength(this.props.cart) : 0}</div>
         <img  className="shopping-cart-icon" src="https://jamazon-seeds.s3.amazonaws.com/cart.svg" />
         <div>Cart</div>
       </div>

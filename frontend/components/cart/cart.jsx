@@ -9,8 +9,22 @@ class Cart extends React.Component {
     }
   }
 
-  addToSubtotal(price) {
-    this.setState({ subtotal: this.state.subtotal + parseInt(price)})
+  componentDidUpdate(prevProps) {
+    if (prevProps.items !== this.props.items) {
+      this.getSubtotal()
+    }
+  }
+
+  getSubtotal() {
+    let sum = 0
+    this.props.items.forEach(item => {
+      sum += item.quantity * item.price
+    })
+    this.setState({ subtotal: sum})
+  }
+
+  handleDelete() {
+    this.props.deleteItem()
   }
 
   render() {
@@ -58,7 +72,7 @@ class Cart extends React.Component {
                     </select>
                   </div>
                   <div>
-                    <button>Delete</button>
+                    <button onClick={this.handleDelete}>Delete</button>
                   </div>
                 </li>
             ))}

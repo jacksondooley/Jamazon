@@ -5,7 +5,7 @@ import ShoppingCart from "./shopping_cart";
 
 const mapStateToProps = state => ({
   cart: state.entities.cart,
-  userId: Object.values(state.entities.users)[0].id
+  userId: Object.values(state.entities?.users)[0]?.id
 })
 
 const mapDispatchToProps = dispatch => ({

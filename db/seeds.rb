@@ -71,8 +71,6 @@ bookProduct1 = Product.create(
 file = open('https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg')
 bookProduct1.photo.attach(io: file, filename: 'hailMary.jpg')
 
-democart = Cart.create(user_id: demouser.id, product_id: 1)
-
 bookProduct2 = Product.create(
     {name: 'Thus Spoke Zarathustra',
     description: "Written by: Friedrich Nietzsche
@@ -86,8 +84,6 @@ bookProduct2 = Product.create(
 
 file = open('https://jamazon-seeds.s3.amazonaws.com/books/thus_spoke_zarathustra.jpg')
 bookProduct2.photo.attach(io: file, filename: 'thus_spoke_zarathustra.jpg')
-
-democart = Cart.create(user_id: demouser.id, product_id: 2)
 
 bookProduct3 = Product.create(
     {name: 'Zero to One: Notes on Startups, or How to Build the Future',

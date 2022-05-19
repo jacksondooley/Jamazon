@@ -14,3 +14,11 @@ export const addItem = (userId, productId, quantity) => (
     data: { userId, productId, quantity}
   })
 )
+
+export const removeItem = (userId, productId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/cart/${userId}`,
+    data: {productId}
+  })
+)
