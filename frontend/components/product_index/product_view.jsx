@@ -46,8 +46,8 @@ const ratingStars = (rating) => {
 const ProductView = (props) => (
     <li className="product-item">
         <Link to={`/products/${props.product.id}`}>
-            <div className="img">
-                <img src={`${props.product.photoUrl}`} alt="" />
+            <div className="product-img-container">
+                <img className="product-img" src={`${props.product.photoUrl}`} alt="" />
             </div>
             <h5 className="product-title">
                 { getName(props.product.name) }  

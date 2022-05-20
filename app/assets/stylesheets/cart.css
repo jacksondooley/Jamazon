@@ -9,6 +9,8 @@
 
 .kettle-img {
     transform: scale(2);
+    max-height: 250px;
+    max-width: 250px;
 }
 
 .kettle-container > h1 {

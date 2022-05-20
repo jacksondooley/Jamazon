@@ -28,15 +28,16 @@
     background-color: rgb(247, 247, 247);
 }
 
-.img {
+.product-img-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 250px;
-    width: 250px;
+    width: 300px;
     padding-bottom: 5px;
 }
 
-img {
+.product-img {
     max-height: 250px;
     max-width: 250px;
 }
