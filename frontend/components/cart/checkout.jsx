@@ -3,8 +3,11 @@ import React from "react";
 const Checkout = () => {
 
   return (
-    <div>
-      Thank you, your order has been placed
+    <div className="checkout-page">
+      <div>
+        Thank you, your order has been placed
+
+      </div>
     </div>
   )
 }

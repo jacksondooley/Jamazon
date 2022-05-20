@@ -27,8 +27,8 @@ class Cart extends React.Component {
     this.setState({ subtotal: sum})
   }
 
-  handleDelete() {
-    this.props.deleteItem()
+  handleDelete(userId, productId) {
+    this.props.removeItem(userId, productId)
   }
 
   render() {
@@ -51,9 +51,9 @@ class Cart extends React.Component {
             <ul>
               {this.props.items.map((item) => (
                   <li className="cart-item">
-                    <div>
+                    <div className="cart-item-photo-container">
                     <Link to={`/products/${item.id}`}>
-                        <img src={item.photoUrl}/>
+                        <img className="cart-item-photo" src={item.photoUrl}/>
                     </Link>
                     </div>
                     <div className="cart-item-text">
@@ -68,6 +68,7 @@ class Cart extends React.Component {
                       </div>
                       <div className="product-price-dollars">
                         {item.price.split(".")[0]}
+                        {console.log(item.price)}
                       </div>
                       <div className="product-price-cents">
                         {item.price.split(".")[1]}
@@ -89,16 +90,30 @@ class Cart extends React.Component {
                         </select>
                       </div>
                       <div>
-                        <button onClick={this.handleDelete}>Delete</button>
+                        <button onClick={() => this.handleDelete(this.props.userId, item.id)} className="button7">
+                          Delete
+                        </button>
                       </div>
                     </div>
                   </li>
               ))}
             </ul>
-          <div>Subtotal ({this.props.items.length} items): ${this.state.subtotal}</div>
+          <div className="cart-subtotal">
+            Subtotal ({this.props.items.length} items): ${this.state.subtotal}
+          </div>
           </div>
           <div className="checkout-container">
-              <div>Subtotal ({this.props.items.length} items): ${this.state.subtotal}</div>
+              <div className="product-price">
+                <div className="product-price-sign">
+                  Subtotal ({this.props.items.length} items): $
+                </div>
+                <div className="product-price-dollars">
+                  {this.state.subtotal.toString().split(".")[0]}
+                </div>
+                <div className="product-price-cents">
+                  {this.state.subtotal.toString().split(".")[1]}
+                </div>
+              </div>
             <Link to="/cart/checkout">
               <button className="button3">Proceed to checkout</button>
             </Link>
