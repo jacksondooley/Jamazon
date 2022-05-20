@@ -28,8 +28,12 @@ class Api::CartController < ApplicationController
   end
 
   def destroy
-    @cart = Cart.find_by(user_id: params[:id], product_id: params[:productId])
-    @cart.destroy
+    if params[:productId] == ""
+      @cart = Cart.where(user_id: params[:id]).destroy_all
+    else
+      @cart = Cart.find_by(user_id: params[:id], product_id: params[:productId])
+      @cart.destroy
+    end
     @user = User.find(params[:id])
     render :show
   end

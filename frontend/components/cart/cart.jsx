@@ -115,7 +115,9 @@ class Cart extends React.Component {
                 </div>
               </div>
             <Link to="/cart/checkout">
-              <button className="button3">Proceed to checkout</button>
+              <button className="button3" onClick={() => this.handleDelete(this.props.userId, null)}>
+                Proceed to checkout
+              </button>
             </Link>
           </div>
         </div>
