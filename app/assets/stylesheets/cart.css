@@ -77,6 +77,16 @@
     margin-bottom: 1vh;
 }
 
+.quantity-container {
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 70px;
+}
+
+.quantity-container > select {
+    border: none;
+}
+
 .button7 {
     background-color: white;
     color: rgb(46, 128, 252);

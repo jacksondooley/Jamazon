@@ -83,11 +83,14 @@ class Cart extends React.Component {
                       <div>
                         Eligible for FREE Shipping & FREE Returns
                       </div>
-                      <div>
-                        <select name="qty">
+                      <div className="quantity-container">
+                        Qty:
+                        {" "}
+                        {/* <select name="qty">
                           <option value="1">1</option>
                           <option value="2">2</option>
-                        </select>
+                        </select> */}
+                        {item.quantity}
                       </div>
                       <div>
                         <button onClick={() => this.handleDelete(this.props.userId, item.id)} className="button7">
