@@ -27,8 +27,13 @@
     font-size: 30px;
 }
 
-.item-img {
+.item-img-container {
     padding-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+.item-img {
+    max-width: 250px;
+    max-height: 250px;
 }

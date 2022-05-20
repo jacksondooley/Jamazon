@@ -14,9 +14,9 @@ class Splash extends React.Component {
                 <div>
                   Jamazon Favorite
                 </div>
-                <div className="item-img">
+                <div className="item-img-container">
                   <Link to="/products/29">
-                    <img src="https://jamazon-seeds.s3.amazonaws.com/jams/blackberry.jpg" />
+                    <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/jams/blackberry.jpg" />
                   </Link>
                 </div>
             </div>
@@ -24,9 +24,9 @@ class Splash extends React.Component {
                 <div>
                   Deal of the Day
                 </div>
-                <div className="item-img">
+                <div className="item-img-container">
                   <Link to="/products/13">
-                    <img src="https://jamazon-seeds.s3.amazonaws.com/electronics/ipad.jpg" />
+                    <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/electronics/ipad.jpg" />
                   </Link>
                 </div>
             </div>
@@ -34,9 +34,9 @@ class Splash extends React.Component {
                 <div>
                   Banana
                 </div>
-                <div className="item-img">
+                <div className="item-img-container">
                   <Link to="/products/1">
-                    <img src="https://m.media-amazon.com/images/I/31zxVniGbKL.jpg" />
+                    <img className="item-img" src="https://m.media-amazon.com/images/I/31zxVniGbKL.jpg" />
                   </Link>
                 </div>
             </div>
@@ -44,9 +44,9 @@ class Splash extends React.Component {
                 <div>
                   King Ka's Recommendation
                 </div>
-                <div className="item-img">
+                <div className="item-img-container">
                   <Link to="/products/14">
-                    <img src="https://jamazon-seeds.s3.amazonaws.com/electronics/webcam.jpg" />
+                    <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/electronics/webcam.jpg" />
                   </Link>
                 </div>
             </div>
@@ -54,9 +54,9 @@ class Splash extends React.Component {
               <div>
                 Interview Prep
               </div>
-              <div className="item-img">
+            <div className="item-img-container">
                 <Link to="/products/4">
-                  <img src="https://jamazon-seeds.s3.amazonaws.com/books/alogrithm_design_manual.jpg" />
+                <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/books/alogrithm_design_manual.jpg" />
                 </Link>
               </div>
             </div>
@@ -64,9 +64,9 @@ class Splash extends React.Component {
               <div>
                 Remember Jim
               </div>
-              <div className="item-img">
+            <div className="item-img-container">
                 <Link to="/products/21">
-                  <img src="https://jamazon-seeds.s3.amazonaws.com/groceries/yogurt.jpeg" />
+                  <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/groceries/yogurt.jpeg" />
                 </Link>
               </div>
             </div>
@@ -74,9 +74,9 @@ class Splash extends React.Component {
               <div>
                 Keep on Jammin`
               </div>
-              <div className="item-img">
+            <div className="item-img-container">
                 <Link to="/products/30">
-                  <img src="https://jamazon-seeds.s3.amazonaws.com/jams/orange.jpg" />
+                  <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/jams/orange.jpg" />
                 </Link>
               </div>
             </div>
@@ -84,9 +84,9 @@ class Splash extends React.Component {
               <div>
                 Sci-Fi Favorite
               </div>
-              <div className="item-img">
+              <div className="item-img-container">
                 <Link to="/products/1">
-                  <img src="https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg" />
+                <img className="item-img" src="https://jamazon-seeds.s3.amazonaws.com/books/hailMary.jpg" />
                 </Link>
               </div>
             </div>
