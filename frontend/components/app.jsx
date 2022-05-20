@@ -10,6 +10,7 @@ import CartContainer from "./cart/cart_container";
 import ProductsContainer from "./product_index/products_container";
 import NewReviewContainer from "./reviews/new_review_container";
 import show_product_container from "./product_show/show_product_container";
+import Checkout from "./cart/checkout";
 
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
         <Switch>
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
-            <Route path="/cart" component={CartContainer} />
+            <Route exact path="/cart" component={CartContainer} />
+            <Route exact path="/cart/checkout" component={Checkout}/>
             <ProtectedRoute exact path="/products/:id/review/:crud" component={NewReviewContainer} />            
             <Route path="/products/:id" component={show_product_container} />
             <Route exact path="/products" component={ProductsContainer}/>

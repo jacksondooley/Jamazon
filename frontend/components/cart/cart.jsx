@@ -9,6 +9,10 @@ class Cart extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.getSubtotal()
+  }
+
   componentDidUpdate(prevProps) {
     if (prevProps.items !== this.props.items) {
       this.getSubtotal()
@@ -40,46 +44,64 @@ class Cart extends React.Component {
           </div>
         :
         <div className="cart-page">
-          <div className="cart-page-top">
-            <h1>Shopping Cart</h1>
-          </div>
-          <ul className="cart-item-container">
-            {this.props.items.map((item) => (
-                <li className="cart-item">
-                  <div>
-                  <Link to={`/products/${item.id}`}>
-                      <img src={item.photoUrl}/>
+          <div className="cart-item-container">
+            <div className="cart-page-top">
+              <h1>Shopping Cart</h1>
+            </div>
+            <ul>
+              {this.props.items.map((item) => (
+                  <li className="cart-item">
+                    <div>
+                    <Link to={`/products/${item.id}`}>
+                        <img src={item.photoUrl}/>
                     </Link>
-                  </div>
-                  <div>
-                  <Link to={`/products/${item.id}`}>
-                    {item.name}
-                  </Link>
-                  </div>
-                  <div>
-                    {item.price}
-                  </div>
-                  <div>
-                    In Stock
-                  </div>
-                  <div>
-                    Eligible for FREE Shipping & FREE Returns
-                  </div>
-                  <div>
-                    <select name="qty">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                    </select>
-                  </div>
-                  <div>
-                    <button onClick={this.handleDelete}>Delete</button>
-                  </div>
-                </li>
-            ))}
-          </ul>
+                    </div>
+                    <div className="cart-item-text">
+                      <div>
+                      <Link to={`/products/${item.id}`}>
+                        {item.name}
+                      </Link>
+                      </div>
+                    <div className="product-price">
+                      <div className="product-price-sign">
+                        $
+                      </div>
+                      <div className="product-price-dollars">
+                        {item.price.split(".")[0]}
+                      </div>
+                      <div className="product-price-cents">
+                        {item.price.split(".")[1]}
+                      </div>
+                    </div>
+                      <div>
+                        Department:{" "}{item.category}
+                      </div>
+                      <div className="cart-stock">
+                        In Stock
+                      </div>
+                      <div>
+                        Eligible for FREE Shipping & FREE Returns
+                      </div>
+                      <div>
+                        <select name="qty">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                      <div>
+                        <button onClick={this.handleDelete}>Delete</button>
+                      </div>
+                    </div>
+                  </li>
+              ))}
+            </ul>
           <div>Subtotal ({this.props.items.length} items): ${this.state.subtotal}</div>
-          <div>
-            <button>Proceed to checkout</button>
+          </div>
+          <div className="checkout-container">
+              <div>Subtotal ({this.props.items.length} items): ${this.state.subtotal}</div>
+            <Link to="/cart/checkout">
+              <button className="button3">Proceed to checkout</button>
+            </Link>
           </div>
         </div>
         }    

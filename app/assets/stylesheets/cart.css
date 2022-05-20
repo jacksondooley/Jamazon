@@ -22,6 +22,9 @@
 .cart-page {
     font-family: AmazonEmber;
     background-color: rgb(225, 225, 225);
+    display: grid;
+    grid-template-columns: 2vw 80vw 2vw 14vw 2vw;
+    grid-template-rows: 2vh auto 2vh;
 }
 
 .cart-page-top {
@@ -29,15 +32,43 @@
 }
 
 .cart-page-top > h1 {
-    font-size: 50px;
+    font-size: 30px;
+    margin-bottom: 1vh;
 }
 
 .cart-item-container {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border: 2vh solid white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .cart-item {
     display: flex;
     flex-direction: row;
+    margin-top: 1vh;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 3px;
+    padding: 1vh;
+}
+
+.cart-item-text {
+    margin-left: 1vw;
+}
+
+.cart-item-text > div {
+    margin-bottom: 1vh;
+}
+
+.checkout-container {
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    height: 200px;
+}
+
+.cart-stock {
+    color: green;
 }
