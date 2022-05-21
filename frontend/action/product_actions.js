@@ -1,4 +1,6 @@
 import * as ProductAPIUtil from './../util/products_api_util'
+import { receiveReviews } from './review_actions'
+
 
 export const RECEIVE_ALL_PRODUCTS = "RECEIVE_ALL_PRODUCTS"
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT"
@@ -20,6 +22,9 @@ export const indexCategoryProducts = (category) => dispatch => (
 
 export const showProduct = (productId) => dispatch => (
     ProductAPIUtil.showProduct(productId)
-        .then( (product) => dispatch(receiveProduct(product)))
+        .then( (res) => {
+            dispatch(receiveProduct(res))
+            dispatch(receiveReviews(res.reviews))
+        })
 )
 

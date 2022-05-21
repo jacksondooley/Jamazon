@@ -43,40 +43,43 @@ class Cart extends React.Component {
           <div className="cart-page-top">
             <h1>Shopping Cart</h1>
           </div>
-          <ul className="cart-item-container">
-            {this.props.items.map((item) => (
-                <li className="cart-item">
-                  <div>
-                  <Link to={`/products/${item.id}`}>
-                      <img src={item.photoUrl}/>
+          <div className="cart-item-container">
+            <ul>
+              {this.props.items.map((item) => (
+                  <li className="cart-item">
+                    <div>
+                    <Link to={`/products/${item.id}`}>
+                        <img src={item.photoUrl}/>
+                      </Link>
+                    </div>
+                    <div>
+                    <Link to={`/products/${item.id}`}>
+                      {item.name}
                     </Link>
-                  </div>
-                  <div>
-                  <Link to={`/products/${item.id}`}>
-                    {item.name}
-                  </Link>
-                  </div>
-                  <div>
-                    {item.price}
-                  </div>
-                  <div>
-                    In Stock
-                  </div>
-                  <div>
-                    Eligible for FREE Shipping & FREE Returns
-                  </div>
-                  <div>
-                    <select name="qty">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                    </select>
-                  </div>
-                  <div>
-                    <button onClick={this.handleDelete}>Delete</button>
-                  </div>
-                </li>
-            ))}
-          </ul>
+                    </div>
+                    <div>
+                      {item.price}
+                    </div>
+                    <div>
+                      In Stock
+                    </div>
+                    <div>
+                      Eligible for FREE Shipping & FREE Returns
+                    </div>
+                    <div>
+                      <select name="qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
+                    </div>
+                    <div>
+                      <button onClick={this.handleDelete}>Delete</button>
+                    </div>
+                  </li>
+              ))}
+            </ul>
+
+          </div>
           <div>Subtotal ({this.props.items.length} items): ${this.state.subtotal}</div>
           <div>
             <button>Proceed to checkout</button>

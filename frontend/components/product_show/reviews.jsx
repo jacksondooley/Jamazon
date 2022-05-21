@@ -71,14 +71,16 @@ class Reviews extends React.Component {
             </div>
         </div>
         <ul>
-            {this.props.reviews?.map((review, key) => (
+            {console.log(this.props)}
+            {this.props.reviews ? 
+            this.props.reviews.map((review, key) => (
                 <Review
                     key={key}
                     review={review} 
                     deleteReview={this.props.deleteReview}
                     currentUserId={this.props.currentUserId}
                 />
-            ))}
+            )) : <div>Loading</div>}
         </ul>
     </div>
 
