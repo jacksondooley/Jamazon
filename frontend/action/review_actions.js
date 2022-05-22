@@ -9,10 +9,12 @@ const receiveReview = (review) => ({
   review
 })
 
-const receiveReviews = (reviews) => ({
+export const receiveReviews = (reviews) => {
+    console.log(reviews)
+  return ({
   type: RECEIVE_REVIEWS,
   reviews
-})
+  })}
 
 const removeReview = (reviewId) => ({
   type: REMOVE_REVIEW,

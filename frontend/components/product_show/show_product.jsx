@@ -197,8 +197,7 @@ class ShowProduct extends React.Component {
                     </div>
 
                 </div>
-                <ReviewsContainer 
-                    reviews={this.props.product?.reviews} 
+                <ReviewsContainer
                     id={this.props.match.params.id}
                     avg_rating={this.props.product?.avg_rating}
                     review_count={this.props.product?.review_count}
