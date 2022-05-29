@@ -81,8 +81,8 @@ class ShowProduct extends React.Component {
         return (
             <div>
                 <div className="show-product-container">
-                    <div className="show-product-img">
-                        <img src={`${this.props.product?.photoUrl}`} alt="" />
+                    <div className="show-product-img-container">
+                        <img className="show-product-img" src={`${this.props.product?.photoUrl}`} alt="" />
                     </div>
                     <div className="show-product-mid">
                         <h1>

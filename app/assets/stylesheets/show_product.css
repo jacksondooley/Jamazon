@@ -6,6 +6,16 @@
     font-family: AmazonEmber;
 }
 
+.show-product-img {
+    max-width: 20vw;
+    max-height: 20vh;
+}
+
+.show-product-img-container {
+    max-width: 20vw;
+    max-height: 20vh;
+}
+
 
 .show-product-mid {
     width: 500px;

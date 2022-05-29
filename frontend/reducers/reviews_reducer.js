@@ -3,7 +3,7 @@ import { RECEIVE_REVIEWS, REMOVE_REVIEW } from "../action/review_actions"
 
 const reviewsReducer = (state = [], action) => {
     Object.freeze(state)
-    newState = Object.assign({}, state)
+    const newState = Object.assign({}, state)
     switch(action.type) {
         case RECEIVE_REVIEWS:
             return action.reviews
