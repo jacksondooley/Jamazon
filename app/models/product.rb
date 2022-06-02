@@ -6,6 +6,10 @@ class Product < ApplicationRecord
 
     has_many :carts
 
+    # def self.search(query)
+    #     self.where("LOWER(name) LIKE ?", "%" + query.downcase + "%")
+    # end
+
     def avg_rating
         reviews.average(:rating)
     end

@@ -19,7 +19,7 @@ class Api::CartController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @cart = Cart.find(@user.id)
+    @cart = Cart.find_by(user_id: @user[:id])
     render :show
   end
 

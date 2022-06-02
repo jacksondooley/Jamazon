@@ -4,7 +4,7 @@ const Checkout = () => {
 
   return (
     <div className="checkout-page">
-      <div>
+      <div className="checkout-container">
         Thank you, your order has been placed
 
       </div>

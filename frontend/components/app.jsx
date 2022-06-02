@@ -8,9 +8,11 @@ import Footer from "./footer/footer";
 import Splash from "./splash/splash";
 import CartContainer from "./cart/cart_container";
 import ProductsContainer from "./product_index/products_container";
+import SearchProductsContainer from "./product_index/search_products_container";
 import NewReviewContainer from "./reviews/new_review_container";
 import show_product_container from "./product_show/show_product_container";
 import Checkout from "./cart/checkout";
+import SplashContainer from "./splash/splash_container";
 
 
 const App = () => {
@@ -29,9 +31,10 @@ const App = () => {
             <ProtectedRoute exact path="/products/:id/review/:crud" component={NewReviewContainer} />            
             <Route path="/products/:id" component={show_product_container} />
             <Route exact path="/products" component={ProductsContainer}/>
+            <Route exact path="/search" component={SearchProductsContainer} />
             <Route path="/:category" component={ProductsContainer} />
             <Route path="/cart" component={CartContainer} />
-            <Route path="/" exact component={Splash} />
+            <Route path="/" exact component={SplashContainer} />
         </Switch>
         <footer>
         {location.pathname == '/login' || location.pathname == '/signup' ? null : <Footer />}

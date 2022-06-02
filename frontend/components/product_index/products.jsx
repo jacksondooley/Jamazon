@@ -4,16 +4,25 @@ import ProductView from "./product_view";
 class allProducts extends React.Component {
     constructor(props) {
         super(props)
-
+        this.state = {
+            products: this.props.products.filter(product => product.category === this.props.category)
+        }
     }
 
     componentDidMount() {
-        this.props.fetchProducts(this.props.category)
+        this.props.fetchProducts()
     }
 
     componentDidUpdate(prevProps) {
+        console.log(this.props)
+        console.log(this.state)
         if (this.props.category !== prevProps.category) {
-            this.props.fetchProducts(this.props.category)
+            if (this.props.category === '') {
+                this.setState({ products: this.props.products})
+            } 
+            else {
+                this.setState({ products: this.props.products.filter(product => product.category === this.props.category)})
+            }
         }
     }
 
@@ -31,11 +40,11 @@ class allProducts extends React.Component {
         return (
             <div className="product-page">
                 <div className="product-count">
-                    {this.props.products.length} Results for {capitalize(this.props.category)}
+                    {this.state.products.length} Results for {capitalize(this.props.category)}
                 </div>
                 <div className="product-container">
                     <ul className="product-list">
-                        {this.props.products.map((product, key) => (
+                        {this.state.products.map((product, key) => (
                             <ProductView key={key} product={product}/>
                         ))}
                     </ul>

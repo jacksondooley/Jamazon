@@ -1,6 +1,7 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { FaSearch } from 'react-icons/fa';
+import {Redirect } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -19,6 +20,8 @@ class SearchBar extends React.Component {
   handleSearch(e) {
     e.preventDefault()
     console.log(this.state.search)
+    this.props.fetchProducts(this.state.search)
+    return (<Redirect to="/search"/>)
   }
 
   render () {

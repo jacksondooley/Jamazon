@@ -6,6 +6,10 @@ class Splash extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    this.props.fetchProducts()
+  }
+
   render() {
     return (
       <div className="splash">

@@ -2,11 +2,9 @@ import { connect } from "react-redux";
 import { indexCategoryProducts } from "../../action/product_actions";
 import products from "./products";
 
-
-
 const mapStateToProps = (state, ownProps) => {
     return {
-    category: ownProps.match.params.category,
+    category: ownProps.match.params.category ? ownProps.match.params.category : '',
     products: Object.values(state.entities.products)
 }
 }
