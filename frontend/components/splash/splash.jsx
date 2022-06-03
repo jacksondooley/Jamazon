@@ -38,10 +38,10 @@ class Splash extends React.Component {
             </div>
             <div className="item-card">
                 <div>
-                  Banana
+                  Random Item
                 </div>
                 <div className="item-img-container">
-                  <Link to="/products/1">
+                  <Link to={`/products/${Math.floor((Math.random() * 70) + 1)}`}>
                     <img className="item-img" src="https://m.media-amazon.com/images/I/31zxVniGbKL.jpg" />
                   </Link>
                 </div>

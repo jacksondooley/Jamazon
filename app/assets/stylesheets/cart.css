@@ -22,6 +22,7 @@
 }
 
 .cart-page {
+    min-height: 78vh;
     font-family: AmazonEmber;
     background-color: rgb(225, 225, 225);
     display: grid;

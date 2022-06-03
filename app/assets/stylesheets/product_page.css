@@ -1,6 +1,6 @@
-/* .product-page {
-    width: 100%;
-} */
+.product-page {
+    min-height: 78vh;
+}
 
 .product-container {
     display: flex;

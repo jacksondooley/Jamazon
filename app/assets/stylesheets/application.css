@@ -75,7 +75,7 @@
  }
 
  .product-page {
-    min-height: auto;
+   min-height: 78vh;
  }
 
  .stars {
