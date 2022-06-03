@@ -42,7 +42,7 @@ export const indexSearchProducts = (query) => dispatch => (
 export const showProduct = (productId) => dispatch => (
     ProductAPIUtil.showProduct(productId)
         .then( (res) => {
-            dispatch(receiveProduct(res))
+            // dispatch(receiveProduct(res))
             dispatch(receiveReviews(res.reviews))
         })
 )

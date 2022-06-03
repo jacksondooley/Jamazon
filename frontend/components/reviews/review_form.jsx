@@ -12,8 +12,12 @@ class ReviewForm extends React.Component {
       product_id: this.props.match.params.id,
       rating: 0,
       title: "",
-      body: ""
+      body: "",
     }
+  }
+
+  componentDidMount() {
+    this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
   }
 
   handleSubmit(e) {
@@ -38,9 +42,9 @@ class ReviewForm extends React.Component {
         <div className="review-form-title">
           <h1>Create Review</h1>
           <div className="review-product">
-            <img src={`${this.props.product.photoUrl}`}/>
+            <img src={`${this.state.product.photoUrl}`}/>
             <div >
-              {this.props.product.name}
+              {this.state.product.name}
             </div>
           </div>
         </div>

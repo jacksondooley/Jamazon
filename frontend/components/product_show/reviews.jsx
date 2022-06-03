@@ -11,6 +11,10 @@ class Reviews extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.showProduct(this.props.id)
+    }
+
     ratingStars = (rating) => {
         let fullStars = rating
     

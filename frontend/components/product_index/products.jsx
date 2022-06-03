@@ -10,7 +10,15 @@ class allProducts extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchProducts()
+        if (this.props.products.length === 0) {
+            this.props.fetchProducts()
+        }
+        if (this.props.category === '') {
+            this.setState({ products: this.props.products})
+        } 
+        else {
+            this.setState({ products: this.props.products.filter(product => product.category === this.props.category)})
+        }
     }
 
     componentDidUpdate(prevProps) {

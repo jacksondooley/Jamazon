@@ -8,14 +8,26 @@ class ShowProduct extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            qty: 1
+            qty: 1,
+            product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id)[0])
         }
 
         this.handleAdd = this.handleAdd.bind(this)
     }
 
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.id)
+        console.log(this.props)
+        if (this.props.products.length === 0) {
+            this.props.fetchProducts()
+        }
+        this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
+    }
+
+    componentDidUpdate(prevProps) {
+        console.log(this.state)
+        // if (this.props.match.params.id !== prevProps.props.match.params.id) {
+        //     this.setState({ product: this.props.products.filter(product => product.id === this.props.match.params.id)})
+        // }
     }
 
 
@@ -82,18 +94,18 @@ class ShowProduct extends React.Component {
             <div>
                 <div className="show-product-container">
                     <div className="show-product-img-container">
-                        <img className="show-product-img" src={`${this.props.product?.photoUrl}`} alt="" />
+                        <img className="show-product-img" src={`${this.state.product?.photoUrl}`} alt="" />
                     </div>
                     <div className="show-product-mid">
                         <h1>
-                            {this.props.product?.name}
+                            {this.state.product?.name}
                         </h1>
                         <div className="show-product-rating">
                             <div className="stars">
-                                {this.ratingStars(this.props.product?.avg_rating)} 
+                                {this.ratingStars(this.state.product?.avg_rating)} 
                             </div>
                             <div className="show-product-ratings">
-                                {this.props.product?.review_count} ratings
+                                {this.state.product?.review_count} ratings
                             </div>
                         </div>
                         <div className="show-product-price-container">
@@ -101,18 +113,18 @@ class ShowProduct extends React.Component {
                                 Price: 
                             </div>
                             <div className="show-product-price">
-                                ${this.props.product?.price}
+                                ${this.state.product?.price}
                             </div>
                             
                         </div>
                         <h2>About this item</h2>
-                        {this.props.product?.description}
+                        {this.state.product?.description}
                     </div>
                     <div className="show-product-cart">
                         <div className="show-product-cart-inner">
 
                             <div className="show-price">
-                                ${this.props.product?.price}
+                                ${this.state.product?.price}
                             </div>
                             <div className="show-delivery-free">
                                 Free Delivery:
@@ -199,8 +211,8 @@ class ShowProduct extends React.Component {
                 </div>
                 <ReviewsContainer
                     id={this.props.match.params.id}
-                    avg_rating={this.props.product?.avg_rating}
-                    review_count={this.props.product?.review_count}
+                    avg_rating={this.state.product?.avg_rating}
+                    review_count={this.state.product?.review_count}
                 />
             </div>
         )
