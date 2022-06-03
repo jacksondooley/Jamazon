@@ -24,7 +24,7 @@ class Cart extends React.Component {
     this.props.items.forEach(item => {
       sum += item.quantity * item.price
     })
-    this.setState({ subtotal: sum})
+    this.setState({ subtotal: Math.round(sum * 100) / 100})
   }
 
   handleDelete(userId, productId) {
