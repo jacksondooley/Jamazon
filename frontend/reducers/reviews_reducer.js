@@ -8,7 +8,9 @@ const reviewsReducer = (state = [], action) => {
         case RECEIVE_REVIEWS:
             return action.reviews
         case REMOVE_REVIEW:
-            return action.reviews
+            const stateArr = Object.values(newState)
+            let updatedState = stateArr.filter(review => review.id !== action.reviewId)
+            return updatedState
         default:
             return state
     }

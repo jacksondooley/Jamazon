@@ -13,6 +13,7 @@ class ReviewForm extends React.Component {
       rating: 0,
       title: "",
       body: "",
+      product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]
     }
   }
 
