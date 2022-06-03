@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { addItem } from "../../action/cart_actions";
-import { showProduct } from "../../action/product_actions";
+import { indexCategoryProducts, showProduct } from "../../action/product_actions";
 import ShowProduct from "./show_product";
 
 
@@ -12,8 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchProduct: (productId) => dispatch(showProduct(productId)),
+    fetchProducts: () => dispatch(indexCategoryProducts()),
     addItem: (userId, productId, quantity) => dispatch(addItem(userId, productId, quantity))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShowProduct)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ShowProduct))

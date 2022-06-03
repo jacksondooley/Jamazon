@@ -11,10 +11,16 @@ class searchProducts extends React.Component {
     }
 
     componentDidMount() {
+        if (this.props.products.length === 0) {
+            this.props.fetchProducts()
+        }
         this.setState({ products: this.props.products.filter(product => product.name.toLowerCase().includes(this.props.match.params.query.toLowerCase()))})
     }
 
     componentDidUpdate(prevProps) {
+        if (this.props.products.length !== prevProps.products.length) {
+            this.setState({ products: this.props.products.filter(product => product.name.includes(this.props.match.params.query))})
+        }
         if (this.props.match.params.query !== prevProps.match.params.query) {
             this.setState({ products: this.props.products.filter(product => product.name.includes(this.props.match.params.query))})
         }

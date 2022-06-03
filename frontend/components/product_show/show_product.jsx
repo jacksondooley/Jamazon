@@ -23,12 +23,11 @@ class ShowProduct extends React.Component {
         this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
     }
 
-    componentDidUpdate(prevProps) {
-        console.log(this.state)
-        // if (this.props.match.params.id !== prevProps.props.match.params.id) {
-        //     this.setState({ product: this.props.products.filter(product => product.id === this.props.match.params.id)})
-        // }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.products.length !== prevProps.props.products.length) {
+    //         this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
+    //     }
+    // }
 
 
     ratingStars = (rating) => {

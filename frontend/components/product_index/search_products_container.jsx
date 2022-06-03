@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//     fetchProducts: (categoryType) => dispatch(indexCategoryProducts(categoryType)),
-// })
+const mapDispatchToProps = dispatch => ({
+    fetchProducts: (categoryType) => dispatch(indexCategoryProducts(categoryType)),
+})
 
-export default withRouter(connect(mapStateToProps, null)(searchProducts))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(searchProducts))
