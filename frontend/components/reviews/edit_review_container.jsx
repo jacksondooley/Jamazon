@@ -5,14 +5,7 @@ import ReviewForm from "./review_form";
 
 const mapStateToProps = (state) => ({
   userId: state.session.id,
-  product: Object.values(state.entities.products),
-  review: {
-    user_id: this.props.userId,
-    product_id: this.props.match.params.id,
-    rating: 0,
-    title: "",
-    body: ""
-  }
+  products: Object.values(state.entities.products),
 })
 
 const mapDispatchToProps = dispatch => ({

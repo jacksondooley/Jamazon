@@ -15,7 +15,7 @@ class Reviews extends React.Component {
         this.props.showProduct(this.props.id)
     }
 
-    
+
 
     ratingStars = (rating) => {
         let fullStars = rating
@@ -41,10 +41,6 @@ class Reviews extends React.Component {
             }
         }
         return starsArr
-    }
-
-    starCount() {
-        
     }
 
     render() {
@@ -79,7 +75,8 @@ class Reviews extends React.Component {
         <ul>
             {console.log(this.props)}
             {this.props.reviews ? 
-            this.props.reviews.map((review, key) => (
+            //sorts reviews, reverses order, then maps them into individual components
+            this.props.reviews.sort((a, b) => a.id < b.id).reverse().map((review, key) => (
                 <Review
                     key={key}
                     review={review} 
