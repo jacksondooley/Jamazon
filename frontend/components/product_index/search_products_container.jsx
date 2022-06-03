@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { indexCategoryProducts } from "../../action/product_actions";
 import searchProducts from "./search_products";
 
@@ -6,7 +7,7 @@ import searchProducts from "./search_products";
 
 const mapStateToProps = (state, ownProps) => {
     return {
-    category: "search",
+    category: ownProps.match.params.query,
     products: Object.values(state.entities.products)
 }
 }
@@ -15,4 +16,4 @@ const mapStateToProps = (state, ownProps) => {
 //     fetchProducts: (categoryType) => dispatch(indexCategoryProducts(categoryType)),
 // })
 
-export default connect(mapStateToProps, null)(searchProducts)
+export default withRouter(connect(mapStateToProps, null)(searchProducts))

@@ -20,8 +20,10 @@ class SearchBar extends React.Component {
   handleSearch(e) {
     e.preventDefault()
     console.log(this.state.search)
-    this.props.fetchProducts(this.state.search)
-    return (<Redirect to="/search"/>)
+    if (this.state.search.length > 0) {
+      console.log(this.props)
+      this.props.history.push(`/search/${this.state.search}`)
+    }
   }
 
   render () {

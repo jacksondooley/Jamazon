@@ -5,20 +5,20 @@ class searchProducts extends React.Component {
     constructor(props) {
         super(props) 
         
-        // this.state = {
-        //     products: 
-        // }
+        this.state = {
+            products: this.props.products.filter(product => product.name.toLowerCase().includes(this.props.match.params.query.toLowerCase()))
+        }
     }
 
-    // componentDidMount() {
-    //     this.props.fetchProducts(this.props.category)
-    // }
+    componentDidMount() {
+        this.setState({ products: this.props.products.filter(product => product.name.toLowerCase().includes(this.props.match.params.query.toLowerCase()))})
+    }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.category !== prevProps.category) {
-    //         this.props.fetchProducts(this.props.category)
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.query !== prevProps.match.params.query) {
+            this.setState({ products: this.props.products.filter(product => product.name.includes(this.props.match.params.query))})
+        }
+    }
 
 
     render() {
@@ -34,11 +34,11 @@ class searchProducts extends React.Component {
         return (
             <div className="product-page">
                 <div className="product-count">
-                    {this.props.products.length} Results for {capitalize(this.props.category)}
+                    {this.state.products.length} Results for {capitalize(this.props.category)}
                 </div>
                 <div className="product-container">
                     <ul className="product-list">
-                        {this.props.products.map((product, key) => (
+                        {this.state.products.map((product, key) => (
                             <ProductView key={key} product={product}/>
                         ))}
                     </ul>
