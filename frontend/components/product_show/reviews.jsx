@@ -15,7 +15,11 @@ class Reviews extends React.Component {
         this.props.showProduct(this.props.id)
     }
 
-
+    sortReviews = (reviews) => {
+        // react doesn't allow state to be modified, so reviews arr from state must be made into a new arr
+        let tempReviews = [...reviews]
+        return tempReviews.sort((a, b) => b.id - a.id)
+    } 
 
     ratingStars = (rating) => {
         let fullStars = rating
@@ -74,9 +78,10 @@ class Reviews extends React.Component {
         </div>
         <ul>
             {console.log(this.props)}
-            {this.props.reviews ? 
-            //sorts reviews, reverses order, then maps them into individual components
-            this.props.reviews.sort((a, b) => a.id < b.id).reverse().map((review, key) => (
+            {this.props.reviews ?
+
+            //sorts reviews, then maps them into individual components
+            this.sortReviews(this.props.reviews).map((review, key) => (
                 <Review
                     key={key}
                     review={review} 

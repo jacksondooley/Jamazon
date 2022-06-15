@@ -23,11 +23,9 @@ class ShowProduct extends React.Component {
         this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.products.length !== prevProps.props.products.length) {
-    //         this.setState({ product: this.props.products.filter(product => product.id === parseInt(this.props.match.params.id))[0]})
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        console.log('update')
+    }
 
 
     ratingStars = (rating) => {
