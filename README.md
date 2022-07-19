@@ -1,9 +1,14 @@
-# Jamazon Wiki
+# Jamazon
 
-[Jamazon Live]() (would be live link)
+[Jamazon](https://jamazon-app.herokuapp.com/)
 
-* [MVP List]()
-* [Database Schema]()
-* [Sample State]()
-* [Frontend Routes and Components]()
-* [Backend Routes]()
+## Technologies Used
+
+* Languages: JavaScript, Ruby, HTML5, CSS
+* Frontend: React and Redux
+* Backend: Ruby on Rails
+* Database: PostgreSQL
+* Hosting: Heroku
+
+## Features and Implementation
+
